@@ -1,0 +1,12 @@
+.env
+node_modules
+build
+pdf
+.vscode
+gulp/version.json
+package-lock.json
+*.zip
+bitrix
+design
+.publish
+readme.txt

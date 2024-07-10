@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding: 15px $min-padding;
+	border-bottom: 1px solid gray;
+
+	@include media-from(md) {
+		align-items: center;
+		gap: 15px;
+	}
+	// .header__logo
+	&__logo {
+	}
+}
