@@ -2,6 +2,8 @@ import * as fn from "./modules/functions.js";
 
 addEventListener("DOMContentLoaded", () => {
 	fn.isTouchDevice();
+	fn.clickAndDrag();
+	fn.scrollHorisontallyByWheel();
 	// functions.isWebp();
 	// functions.stickyHeader();
 });

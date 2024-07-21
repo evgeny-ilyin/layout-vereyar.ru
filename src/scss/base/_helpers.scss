@@ -165,6 +165,17 @@
 }
 
 /**
+ * Drag
+ */
+.js-dragging:hover {
+	cursor: grabbing !important;
+}
+
+.js-dragging a:hover {
+	cursor: grabbing !important;
+}
+
+/**
  * Animations
  */
 .blink {
