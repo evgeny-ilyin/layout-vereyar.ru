@@ -5,7 +5,7 @@ import tinypng from "gulp-tinypng-compress";
 export const img = () => {
 	return (
 		app.gulp
-			.src(app.path.src.img)
+			.src(app.path.src.img, { encoding: false })
 			.pipe(
 				app.plugins.plumber(
 					app.plugins.notify.onError({
@@ -21,11 +21,11 @@ export const img = () => {
 			.pipe(app.gulp.dest(app.path.build.img))
 
 			// перенести все картинки без оптимизации (dev), чтобы работал лайтбокс Fancybox по ссылке на картинку (без замены на picture и webp)
-			.pipe(app.plugins.if(!app.isBuild, app.gulp.src(app.path.src.img)))
+			.pipe(app.plugins.if(!app.isBuild, app.gulp.src(app.path.src.img, { encoding: false })))
 			.pipe(app.plugins.if(!app.isBuild, app.gulp.dest(app.path.build.img)))
 
 			// оптимизировать картинки tinypng (prod) с лимитом 500 изображений в месяц
-			.pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.img)))
+			.pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.img, { encoding: false })))
 			.pipe(app.plugins.if(app.isBuild, app.plugins.newer(app.path.build.img)))
 			// .pipe(
 			// 	app.plugins.if(
@@ -54,7 +54,7 @@ export const img = () => {
 			// .pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.img))
 
 			// svg просто перенести из src в build
-			.pipe(app.gulp.src(app.path.src.svg))
+			.pipe(app.gulp.src(app.path.src.svg, { encoding: false }))
 			.pipe(app.gulp.dest(app.path.build.img))
 
 			.pipe(app.plugins.browsersync.stream())

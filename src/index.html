@@ -1,20 +1,22 @@
-@@include('html/head.html', {
-"title": "Home"
+@@include('html/components/head.html', {
+"title": "Вереяр — всесезонный горнолыжный и бальнеологический курорт"
 })
 <body>
-	@@include('html/header.html', {})
+	@@include('html/layout/header.html', {})
 
-	<main class="container">
-		Content
+	<main class="container flex-1">
+			@@include('html/layout/block-main.html', {})
+			@@include('html/layout/block-partners.html', {})
+			@@include('html/layout/block-press.html', {})
+			@@include('html/layout/block-transport.html', {})
 	</main>
 
-	@@include('html/footer.html', {
+	@@include('html/layout/footer.html', {
 		"year_from": 2020,
 		"year_to": 2023,
 	})
 
-	@@include('html/cookies.html', {})
-	@@include('html/svg-sprite.html', {})
-	@@include('html/scripts.html', {})
+	@@include('html/components/svg-sprite.html', {})
+	@@include('html/components/scripts.html', {})
 </body>
 </html>

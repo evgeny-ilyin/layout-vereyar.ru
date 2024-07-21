@@ -2,19 +2,17 @@
 /// Также дублируется в _variables для удобного использования в scss
 /// Можно обойтись без дублирования, если вызывать через функцию color(color-name) напрямую из map, но так дольше писать xD
 $colors: (
-	"black": #333,
-	"black30": rgba(51, 51, 51, 0.3),
-	"black60": rgba(51, 51, 51, 0.6),
-	"black70": rgba(51, 51, 51, 0.7),
-	"white": #fff,
-	"gray": #ccc,
-	"blue60":
-		rgba(
-			$color: #05486e,
-			$alpha: 0.6,
-		),
-		"red": #ff2e00,
-		"red-modern": #e35833,
+	"grafit-vereyar": #292929,
+	"krasnyy-vereyar": #fd504c,
+	"zelenyy-vereyar": #57b9a6,
+	"bolotnyy-vereyar": #7e775e,
+	"nebesnyy-vereyar": #98c8cd,
+	"belyy": #fff,
+	"seryy": #999,
+	"black-real": #000,
+	"gray-light": #e1e1e1,
+	"gray-dark": #3f3d35,
+	"gray-light-2": #bcbcbc,
 );
 
 $svgs: (

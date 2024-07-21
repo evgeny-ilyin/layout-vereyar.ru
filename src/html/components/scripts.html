@@ -1,0 +1,18 @@
+<!-- Укажите свой API-ключ. Тестовый ключ НЕ БУДЕТ работать на других сайтах. -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=4099eef8-9005-4e17-bad7-b20a671b0ca3"></script>
+<script src="js/app.js"></script>
+
+<script>
+	let data = {
+		"pointerIcon": "img/icon-map-pointer.svg",
+		"type": "FeatureCollection",
+		"features": [
+			{
+				"type": "Feature", "id": 0, "geometry": { "type": "Point", "coordinates": [62.228357, 33.864617] }, "properties": {
+					"balloonContent": ""
+				}
+			}
+		]
+	};
+	ymaps.ready(mapInit);
+</script>

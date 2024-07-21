@@ -12,47 +12,6 @@
 }
 
 /**
- * Main content containers
- * 1. Make the container full-width with a maximum width
- * 2. Center it in the viewport
- * 3. Leave some space on the edges, especially valuable on small screens
- */
-.container {
-	min-width: $min-width;
-	width: 100%; /* 1 */
-	margin-left: auto; /* 2 */
-	margin-right: auto; /* 2 */
-	padding-left: $min-padding; /* 3 */
-	padding-right: $min-padding; /* 3 */
-	padding-top: 50px;
-	padding-bottom: 40px;
-	flex: 1;
-	
-
-	@include media-from(md) {
-		padding-left: $max-padding; /* 3 */
-		padding-right: $max-padding; /* 3 */
-	}
-
-	// .container_edges
-	&_edges {
-		padding: 0 !important;
-	}
-
-	// .container_edgesX
-	&_edgesX {
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-	}
-
-	// .container_edgesY
-	&_edgesY {
-		padding-top: 0 !important;
-		padding-bottom: 0 !important;
-	}
-}
-
-/**
  * Hide text while making it readable for screen readers
  * 1. Needed in WebKit-based browsers because of an implementation bug;
  *    See: https://code.google.com/p/chromium/issues/detail?id=457146
@@ -89,13 +48,13 @@
 
 // .hidden-lg
 .hidden-lg {
-	@include media-from(lg) {
+	@include resp-from(lg) {
 		display: none !important;
 	}
 }
 
 .hidden-img-lg {
-	@include media-from(lg) {
+	@include resp-from(lg) {
 		img {
 			display: none !important;
 		}
@@ -105,7 +64,7 @@
 // .visible-lg
 .visible-lg {
 	display: none !important;
-	@include media-from(lg) {
+	@include resp-from(lg) {
 		display: block !important;
 	}
 }
@@ -126,6 +85,85 @@
 	position: relative;
 }
 
+.absolute {
+	position: absolute;
+}
+
+.top {
+	top: 0;
+}
+
+.bottom {
+	bottom: 0;
+}
+
+.z-1 {
+	z-index: 1;
+}
+
+/**
+ * Scrollbar
+ */
+.scrollblock {
+	overflow: hidden;
+	// overscroll-behavior: contain; // https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior
+	// overscroll-behavior-x: contain;
+	// overscroll-behavior-y: contain;
+
+	/* Firefox */
+	@supports (-moz-appearance: none) {
+		scrollbar-width: thin;
+		scrollbar-color: $gray-dark $gray-light;
+	}
+
+	/* Chrome, Edge and Safari */
+	&::-webkit-scrollbar {
+		width: 14px;
+		height: 14px;
+	}
+
+	&::-webkit-scrollbar-track,
+	&::-webkit-scrollbar-thumb {
+		border-radius: 0;
+	}
+
+	&::-webkit-scrollbar-track,
+	&::-webkit-scrollbar-track:hover,
+	&::-webkit-scrollbar-track:active {
+		background-color: $white;
+	}
+
+	&::-webkit-scrollbar-track {
+		border-bottom: 2px solid $gray-light;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-bottom: 7px solid $red;
+	}
+
+	&::-webkit-scrollbar-thumb:hover,
+	&::-webkit-scrollbar-thumb:active {
+		border-color: $red-dark;
+	}
+}
+
+.hide-scroll {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.scroll-x {
+	overflow-x: scroll;
+}
+
+.scroll-y {
+	overflow-y: scroll;
+}
+
 /**
  * Animations
  */
@@ -133,11 +171,311 @@
 	animation: fadeEffect 0.8s;
 }
 
+.hover-bounce {
+	@include on-hover {
+		animation: bounceEffect 1.2s ease infinite;
+	}
+}
+
+@keyframes boxShadowEffect {
+	0%,
+	100% {
+		box-shadow: 0 0 0 0 $green;
+	}
+	50% {
+		box-shadow: 0 0 10px 0 $green;
+	}
+}
+
+@keyframes bounceEffect {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-3px);
+	}
+}
+
 @keyframes fadeEffect {
 	from {
-		opacity: 0;
+		opacity: 0.5;
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+/**
+ * Flexes
+ */
+.d-flex {
+	display: flex !important;
+}
+
+.flex-fill {
+	flex: 1 1 auto !important;
+}
+
+.flex-row {
+	flex-direction: row !important;
+}
+
+.flex-column {
+	flex-direction: column !important;
+}
+
+.flex-grow-0 {
+	flex-grow: 0 !important;
+}
+
+.flex-grow-1 {
+	flex-grow: 1 !important;
+}
+
+.flex-shrink-0 {
+	flex-shrink: 0 !important;
+}
+
+.flex-shrink-1 {
+	flex-shrink: 1 !important;
+}
+
+.flex-wrap {
+	flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+	flex-wrap: nowrap !important;
+}
+
+.justify-content-start {
+	justify-content: flex-start !important;
+}
+
+.justify-content-end {
+	justify-content: flex-end !important;
+}
+
+.justify-content-center {
+	justify-content: center !important;
+}
+
+.justify-content-between {
+	justify-content: space-between !important;
+}
+
+.justify-content-around {
+	justify-content: space-around !important;
+}
+
+.justify-content-evenly {
+	justify-content: space-evenly !important;
+}
+
+.align-items-start {
+	align-items: flex-start !important;
+}
+
+.align-items-end {
+	align-items: flex-end !important;
+}
+
+.align-items-center {
+	align-items: center !important;
+}
+
+.align-items-baseline {
+	align-items: baseline !important;
+}
+
+.align-items-stretch {
+	align-items: stretch !important;
+}
+
+// .align-content-start {
+//   align-content: flex-start !important;
+// }
+
+// .align-content-end {
+//   align-content: flex-end !important;
+// }
+
+// .align-content-center {
+//   align-content: center !important;
+// }
+
+// .align-content-between {
+//   align-content: space-between !important;
+// }
+
+// .align-content-around {
+//   align-content: space-around !important;
+// }
+
+// .align-content-stretch {
+//   align-content: stretch !important;
+// }
+
+// .align-self-auto {
+//   align-self: auto !important;
+// }
+
+// .align-self-start {
+//   align-self: flex-start !important;
+// }
+
+// .align-self-end {
+//   align-self: flex-end !important;
+// }
+
+// .align-self-center {
+//   align-self: center !important;
+// }
+
+// .align-self-baseline {
+//   align-self: baseline !important;
+// }
+
+// .align-self-stretch {
+//   align-self: stretch !important;
+// }
+
+.gap-0 {
+	gap: 0 !important;
+}
+
+.gap-1 {
+	gap: 0.25rem !important;
+}
+
+.gap-2 {
+	gap: 0.5rem !important;
+}
+
+.gap-3 {
+	gap: 1rem !important;
+}
+
+.gap-4 {
+	gap: 1.5rem !important;
+}
+
+.gap-5 {
+	gap: 2rem !important;
+}
+
+.gap-6 {
+	gap: 2.5rem !important;
+}
+
+.gap-7 {
+	gap: 3rem !important;
+}
+
+/**
+ * Borders
+ */
+.circle {
+	border-radius: 50%;
+}
+
+/**
+ * Margins
+ */
+.mt-0 {
+	margin-top: 0 !important;
+}
+.mt-1 {
+	margin-top: 0.25rem !important;
+}
+.mt-2 {
+	margin-top: 0.5rem !important;
+}
+.mt-3 {
+	margin-top: 1rem !important;
+}
+.mt-4 {
+	margin-top: 1.5rem !important;
+}
+.mt-5 {
+	margin-top: 2rem !important;
+}
+.mt-6 {
+	margin-top: 2.5rem !important;
+}
+
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+.mb-1 {
+	margin-bottom: 0.25rem !important;
+}
+.mb-2 {
+	margin-bottom: 0.5rem !important;
+}
+.mb-3 {
+	margin-bottom: 1rem !important;
+}
+.mb-4 {
+	margin-bottom: 1.5rem !important;
+}
+.mb-5 {
+	margin-bottom: 2rem !important;
+}
+.mb-6 {
+	margin-bottom: 2.5rem !important;
+}
+
+.ml-0 {
+	margin-left: 0 !important;
+}
+.ml-1 {
+	margin-left: 0.25rem !important;
+}
+.ml-2 {
+	margin-left: 0.5rem !important;
+}
+.ml-3 {
+	margin-left: 1rem !important;
+}
+.ml-4 {
+	margin-left: 1.5rem !important;
+}
+.ml-5 {
+	margin-left: 2rem !important;
+}
+.ml-6 {
+	margin-left: 2.5rem !important;
+}
+
+.mt-a {
+	margin-top: auto !important;
+}
+.mr-a {
+	margin-right: auto !important;
+}
+.mb-a {
+	margin-bottom: auto !important;
+}
+.ml-a {
+	margin-left: auto !important;
+}
+
+/**
+ * Heights / Widths
+ */
+.h-100 {
+	height: 100% !important;
+}
+
+/**
+ * Font sizes
+ */
+.fz-20 {
+	font-size: rem(14) !important;
+
+	@include resp-from(lg) {
+		font-size: rem(20) !important;
 	}
 }

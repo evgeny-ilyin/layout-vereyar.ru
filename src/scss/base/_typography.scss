@@ -19,12 +19,27 @@ vmax – наибольшее из (vw, vh)
 
 body {
 	color: $text-color;
-	font: normal rem(15) / 1.2 $ff-text;
+	font: normal rem(16) / 1.2 $family-secondary;
 }
 
 /**
  * Text others
  */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: $family-primary;
+}
+
 h1,
 .h1 {
 	@extend %h1-heading;
@@ -137,4 +152,40 @@ ol {
  */
 .small {
 	font-size: 0.85rem !important;
+}
+
+/**
+ * Links
+ */
+.link-more {
+	display: flex;
+	align-items: center;
+	color: $swamp;
+	text-align: right;
+	line-height: 1;
+	text-underline-offset: 2px;
+
+	&::after {
+		content: "";
+		display: block;
+		position: relative;
+		width: 14px;
+		height: 15px;
+		background: currentColor;
+		clip-path: polygon(0 0, 0% 100%, 100% 50%);
+		margin-left: 9px;
+		// right: 0;
+	}
+
+	@include on-hover {
+		color: $green;
+
+		// &::after {
+		// 	right: -2px;
+		// }
+	}
+}
+
+.no-decoration {
+	text-decoration-color: transparent !important;
 }

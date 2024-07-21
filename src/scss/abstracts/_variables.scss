@@ -3,13 +3,13 @@
 // -----------------------------------------------------------------------------
 
 //** Fonts
-/// Headers (serif) font family
+/// Headers font family
 /// @type List
-$ff-header: "PT Serif", "Times New Roman", serif !default;
+$family-primary: "TT Firs Neue", "Roboto", "Helvetica", "Open Sans", "Arial", sans-serif !default;
 
-/// Regular (sans-serif) font family
+/// Regular font family
 /// @type List
-$ff-text: "Montserrat", "Helvetica", "Open Sans", "Arial", sans-serif !default;
+$family-secondary: "Roboto", "Helvetica", "Open Sans", "Arial", sans-serif !default;
 
 /// Monospace font family
 /// @type List
@@ -23,15 +23,23 @@ $browser-context: 16;
 // Можно обойтись без дублирования тут, если вызывать через функцию color(color-name) напрямую из _root-vars-map, но так дольше писать xD
 /// Simple colors
 /// @type Color
-$black: var(--black);
-$black30: var(--black30);
-$black60: var(--black60);
-$black70: var(--black70);
-$white: var(--white);
-$gray: var(--gray);
-$blue60: var(--blue60);
-$red: var(--red);
-$red-modern: var(--red-modern);
+$black: var(--grafit-vereyar);
+$red: var(--krasnyy-vereyar);
+$green: var(--zelenyy-vereyar);
+$swamp: var(--bolotnyy-vereyar);
+$sky: var(--nebesnyy-vereyar);
+$white: var(--belyy);
+$gray: var(--seryy);
+
+$black-real: var(--black-real);
+$gray-light: var(--gray-light);
+$gray-dark: var(--gray-dark);
+$gray-light-2: var(--gray-light-2);
+
+$greenHEX: #57b9a6;
+$redHEX: #fd504c;
+
+$red-dark: darken($redHEX, 10%);
 
 /// Main brand color
 /// @type Color
@@ -49,11 +57,11 @@ $brand-color-accent: #e35833 !default;
 /// @type Color
 $text-color: $black;
 $href-color: $black;
-$href-color-hover: $black;
+$href-color-hover: $red;
 
 /// Form colors
 /// @type Color
-$placeholder-color: $black30;
+$placeholder-color: $black;
 $input-color: $black;
 
 //** SVGs --var
@@ -75,8 +83,8 @@ $transition-default: 250ms ease-in-out;
 /// @type Length
 $min-width: 320px !default;
 $max-width: 1440px !default;
-$min-padding: 15px !default;
-$max-padding: 30px !default;
+$min-padding: 20px !default;
+$max-padding: 50px !default;
 
 //** Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length

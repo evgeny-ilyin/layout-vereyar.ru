@@ -2,16 +2,14 @@
 /// Basic styles for headings
 ///
 %h1-heading {
-	font-size: rem(32);
+	font-size: rem(24);
 	line-height: 1.2;
 	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
 
-	@include media-from(md) {
-		font-size: rem(40);
-	}
-
-	@include media-from(lg) {
-		font-size: rem(64);
+	@include resp-from(md) {
+		font-size: rem(32);
 	}
 }
 
@@ -20,7 +18,7 @@
 	line-height: 1.2;
 	font-weight: 600;
 
-	@include media-from(lg) {
+	@include resp-from(lg) {
 		font-size: rem(34);
 	}
 }
@@ -30,7 +28,7 @@
 	line-height: 1.2;
 	font-weight: 600;
 
-	@include media-from(lg) {
+	@include resp-from(lg) {
 		font-size: rem(24);
 	}
 }
@@ -40,7 +38,7 @@
 	line-height: 1.2;
 	font-weight: 600;
 
-	@include media-from(lg) {
+	@include resp-from(lg) {
 		font-size: rem(20);
 	}
 }
@@ -50,7 +48,7 @@
 	line-height: 1.2;
 	font-weight: 600;
 
-	@include media-from(lg) {
+	@include resp-from(lg) {
 		font-size: rem(18);
 	}
 }
@@ -60,7 +58,7 @@
 	line-height: 1.2;
 	font-weight: 600;
 
-	@include media-from(lg) {
+	@include resp-from(lg) {
 		font-size: rem(16);
 	}
 }
@@ -69,10 +67,10 @@
 /// Basic styles for links
 ///
 %text-links {
-	color: $href-color;
+	color: currentColor;
 
 	@include on-event {
-		color: $href-color-hover;
+		color: currentColor;
 	}
 
 	// &:focus-visible {
@@ -84,18 +82,18 @@
 
 %text-links-solid {
 	position: relative;
-	color: $href-color;
+	color: currentColor;
 	text-decoration: underline;
 	text-decoration-color: transparent;
-	text-underline-offset: 5px;
-	transition: all 0.15s ease;
+	text-underline-offset: 3px;
+	transition: all $transition-default;
 
 	@include on-hover {
-		text-decoration-color: inherit;
+		text-decoration-color: currentColor;
 	}
 
 	@include on-active {
-		color: $black60;
+		color: currentColor;
 		transition: all $transition-default;
 	}
 
@@ -113,11 +111,11 @@
 
 %link-classic {
 	text-decoration: underline;
-	text-decoration-color: $black30;
+	text-decoration-color: $black;
 	text-underline-offset: 1px;
 	transition: all 0.15s ease;
 
 	@include on-hover {
-		text-decoration-color: $black60;
+		text-decoration-color: $black;
 	}
 }

@@ -2,17 +2,136 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 .header {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	padding: 15px $min-padding;
-	border-bottom: 1px solid gray;
+	border-bottom: 2px solid $gray-dark;
 
-	@include media-from(md) {
+	// .header__wrapper
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 		align-items: center;
-		gap: 15px;
+		position: relative;
+		padding: 20px 0;
+		gap: 10px 5px;
+
+		@include resp-from(md) {
+			flex-wrap: nowrap;
+			justify-content: initial;
+			gap: 30px;
+		}
+
+		@include resp-from(lg) {
+			padding: 39px 0 20px;
+		}
 	}
+
 	// .header__logo
 	&__logo {
+		width: 80%;
+		// max-width: 469px;
+
+		@include resp-from(md) {
+			width: auto;
+		}
+
+		a {
+			display: flex;
+			color: $white;
+		}
+
+		svg {
+			fill: currentColor;
+			width: 100%;
+			max-width: 258px;
+			height: 48px;
+
+			@include resp-from(lg) {
+				width: 350px;
+				max-width: none;
+				height: 85px;
+				transition: width 0s;
+			}
+
+			@include resp-from(xl) {
+				width: 469px;
+				height: 85px;
+				transition: all $transition-default;
+			}
+		}
+	}
+
+	// .header__slogan
+	&__slogan {
+		text-transform: uppercase;
+		font-family: $family-primary;
+		// font-size: clamp(rem(8), 1.85dvw, rem(19));
+		font-size: clamp(rem(8), 3vw, rem(13));
+		font-size: clamp(rem(8), 3dvw, rem(13));
+		max-width: calc(100% - 115px);
+		// max-width: 23ch;
+		order: 3;
+		margin-left: auto;
+		text-align: right;
+
+		@include resp-from(sm) {
+			max-width: 250px;
+		}
+
+		@include resp-from(md) {
+			max-width: 27vw;
+			max-width: 27dvw;
+			order: 0;
+			margin: 5px 0 0 0;
+			font-size: clamp(rem(11), 1.5vw, rem(16));
+			font-size: clamp(rem(11), 1.5dvw, rem(16));
+			text-align: left;
+		}
+
+		@include resp-from(xl) {
+			max-width: 400px;
+			font-size: rem(19);
+		}
+	}
+
+	// .header__support
+	&__support {
+		display: flex;
+		order: 2;
+
+		@include resp-from(md) {
+			margin-left: auto;
+			order: 0;
+		}
+
+		svg {
+			width: 110px;
+			height: 43px;
+
+			@include resp-from(md) {
+				width: 125px;
+				height: 48px;
+			}
+
+			@include resp-from(lg) {
+				width: 151px;
+				height: 59px;
+			}
+		}
+	}
+
+	// .header__nav
+	&__nav {
+		display: flex;
+		align-items: center;
+		position: relative;
+		order: 1;
+
+		@include resp-from(md) {
+			order: 0;
+		}
+
+		@include resp-from(lg) {
+			margin-left: 30px;
+		}
 	}
 }

@@ -6,10 +6,10 @@
  * Set up a decent box model on the root element
  */
 html {
-  box-sizing: border-box;
-  min-width: $min-width;
+	box-sizing: border-box;
+	min-width: $min-width;
 	min-height: 100vh;
-	overflow-x: hidden;
+	// overflow-x: hidden; // не будет работать sticky
 	cursor: default;
 }
 
@@ -18,8 +18,16 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	// overflow-x: hidden; // не будет работать sticky
+	// scrollbar-gutter: stable;
+	// sticky для сайдбара не работает, если для html стоит overflow-x: hidden; (выше), нужен clip (ниже), но тогда возникают проблемы у body.noscroll
+	// overflow-x: hidden;
+	// overflow-y: scroll;
 }
+
+// body,
+// html {
+// 	overflow-x: clip;
+// }
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -30,5 +38,31 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+/**
+ * Selections
+ */
+::-moz-selection {
+	background: $green;
+	color: $white;
+}
+
+::selection {
+	background: $green;
+	color: $white;
+}
+
+img::-moz-selection {
+	background: rgba($greenHEX, 0.5);
+	color: transparent;
+}
+img::selection {
+	background: rgba($greenHEX, 0.5);
+	color: transparent;
+}
+
+svg {
+	transition: all $transition-default;
 }

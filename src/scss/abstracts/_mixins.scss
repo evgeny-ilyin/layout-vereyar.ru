@@ -87,7 +87,7 @@
 }
 
 /// Media queries
-@mixin media-from($breakpoint) {
+@mixin resp-from($breakpoint) {
 	@if map-has-key($breakpoints, $breakpoint) {
 		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
 			@content;
@@ -98,7 +98,7 @@
 	}
 }
 
-@mixin media-to($breakpoint) {
+@mixin resp-to($breakpoint) {
 	@if map-has-key($breakpoints, $breakpoint) {
 		@media (max-width: #{map-get($breakpoints, $breakpoint) - 1}) {
 			@content;
@@ -109,7 +109,7 @@
 	}
 }
 
-@mixin media-range($from, $to) {
+@mixin resp-range($from, $to) {
 	@media (min-width: #{map-get($breakpoints, $from)}) and (max-width: #{map-get($breakpoints, $to) - 1}) {
 		@content;
 	}
