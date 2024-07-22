@@ -9,7 +9,11 @@
 // 2. Vendors
 @import "vendors/normalize";
 @import "vendors/reset";
-@import "vendors/swiper";
+@import "~@fancyapps/ui/dist/fancybox/fancybox";
+@import "~@fancyapps/ui/dist/carousel/carousel";
+@import "vendors/fancyapps-vars-overrides";
+
+@import "vendors/swiper"; // сменить на fancy
 
 // 3. Base stuff
 @import "base/base";

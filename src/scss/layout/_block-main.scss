@@ -128,9 +128,6 @@
 	// .frame-card-2__img
 	&__img {
 		flex: 0 0 auto;
-
-		img {
-		}
 	}
 
 	// .frame-card-2__text
@@ -257,6 +254,10 @@
 		position: relative;
 		margin-left: auto;
 		margin-right: -4px;
+
+		@include when-inside(".modal") {
+			margin: 0;
+		}
 	}
 
 	// .block-author_data
@@ -267,17 +268,40 @@
 		height: 90px;
 		gap: 6px;
 		margin-top: 3px;
+
+		@include when-inside(".modal") {
+			margin: 0;
+			height: auto;
+		}
 	}
 
 	// .block-author__name
 	&__name {
 		font-weight: 500;
+
+		@include when-inside(".modal") {
+			font-size: rem(14);
+			font-weight: 600;
+
+			@include resp-from(lg) {
+				font-size: rem(17);
+			}
+		}
 	}
 
 	// .block-author__title
 	&__title {
 		color: $gray;
 		font-size: rem(13);
+
+		@include when-inside(".modal") {
+			color: $black;
+			font-size: rem(12);
+
+			@include resp-from(lg) {
+				font-size: rem(13);
+			}
+		}
 	}
 }
 

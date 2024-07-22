@@ -106,6 +106,31 @@
  */
 .scrollblock {
 	overflow: hidden;
+
+	&.scroll-x {
+		overflow-x: scroll;
+		
+		&::-webkit-scrollbar-track {
+			border-bottom: 2px solid $gray-light;
+		}
+	
+		&::-webkit-scrollbar-thumb {
+			border-bottom: 7px solid $red;
+		}
+	}
+
+	&.scroll-y {
+		overflow-y: scroll;
+
+		&::-webkit-scrollbar-track {
+			border-right: 2px solid $gray-light;
+		}
+	
+		&::-webkit-scrollbar-thumb {
+			border-right: 6px solid $red;
+		}
+	}
+
 	// overscroll-behavior: contain; // https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior
 	// overscroll-behavior-x: contain;
 	// overscroll-behavior-y: contain;
@@ -131,14 +156,6 @@
 	&::-webkit-scrollbar-track:hover,
 	&::-webkit-scrollbar-track:active {
 		background-color: $white;
-	}
-
-	&::-webkit-scrollbar-track {
-		border-bottom: 2px solid $gray-light;
-	}
-
-	&::-webkit-scrollbar-thumb {
-		border-bottom: 7px solid $red;
 	}
 
 	&::-webkit-scrollbar-thumb:hover,

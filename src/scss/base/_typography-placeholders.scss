@@ -17,9 +17,11 @@
 	font-size: rem(24);
 	line-height: 1.2;
 	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
 
 	@include resp-from(lg) {
-		font-size: rem(34);
+		font-size: rem(30);
 	}
 }
 
