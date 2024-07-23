@@ -114,14 +114,25 @@ export function clickAndDrag() {
 export function scrollHorisontallyByWheel() {
 	const elements = document.querySelectorAll(".js-scroll-x");
 	elements.forEach((el) => {
-		el.addEventListener(
-			// "wheel",
-			// (event) => {
-			// 	event.preventDefault();
-			// 	el.scrollBy({
-			// 		left: event.deltaY < 0 ? -200 : 200,
-			// 	});
-			// }
-		);
+		el.addEventListener("wheel", (event) => {
+			event.preventDefault();
+			el.scrollBy({
+				left: event.deltaY < 0 ? -200 : 200,
+			});
+		});
+	});
+}
+
+export function closeMenuHandler() {
+	const menuToggler = document.getElementById("menu-toggle"),
+		menuWrapper = document.querySelector(".menu-wrapper"),
+		linkClassName = "nav__link";
+	if (!menuToggler || !menuWrapper) return;
+	document.addEventListener("click", (e) => {
+		if (menuToggler.checked) {
+			if (!menuWrapper.contains(e.target) || e.target.classList.contains(linkClassName)) {
+				menuToggler.click();
+			}
+		}
 	});
 }

@@ -14,8 +14,12 @@
 	max-width: 375px;
 	transform: translateX(100%);
 	transition: transform 0.5s ease-in-out;
-	padding: 55px 20px 20px;
+	padding: 20px;
 	z-index: 3;
+
+	@include resp-from(lg) {
+		padding-top: 55px;
+	}
 }
 
 .nav {

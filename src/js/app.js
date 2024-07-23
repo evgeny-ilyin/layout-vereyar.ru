@@ -6,7 +6,8 @@ addEventListener("DOMContentLoaded", () => {
 
 	fn.isTouchDevice();
 	fn.clickAndDrag();
-	fn.scrollHorisontallyByWheel();
+	// fn.scrollHorisontallyByWheel();
+	fn.closeMenuHandler();
 	// functions.isWebp();
 	// functions.stickyHeader();
 });
