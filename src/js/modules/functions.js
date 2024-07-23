@@ -115,13 +115,13 @@ export function scrollHorisontallyByWheel() {
 	const elements = document.querySelectorAll(".js-scroll-x");
 	elements.forEach((el) => {
 		el.addEventListener(
-			"wheel",
-			(event) => {
-				event.preventDefault();
-				el.scrollBy({
-					left: event.deltaY < 0 ? -200 : 200,
-				});
-			}
+			// "wheel",
+			// (event) => {
+			// 	event.preventDefault();
+			// 	el.scrollBy({
+			// 		left: event.deltaY < 0 ? -200 : 200,
+			// 	});
+			// }
 		);
 	});
 }
