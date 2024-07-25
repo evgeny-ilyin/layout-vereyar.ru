@@ -8,5 +8,4 @@ package-lock.json
 *.zip
 bitrix
 design
-.publish
-readme.txt
+*.txt
