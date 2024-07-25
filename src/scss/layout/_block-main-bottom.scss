@@ -1,13 +1,38 @@
 .b-frame-1 {
-	margin-right: 33px;
-	max-width: 523px;
+	margin-right: 138px;
+	margin-left: 55px;
+	max-width: 425px;
+
+	@include resp-from(lg) {
+		margin-right: 33px;
+		margin-left: 0;
+		max-width: 523px;
+	}
 }
 
 .b-frame-2 {
-	margin: 0 23px -30px -85px;
+	margin: 0 61px -23px -85px;
+
+	img {
+		width: 228px;
+		height: 325px;
+	}
 
 	.frame-legend {
-		margin: 130px -15px 0 0;
+		margin: 25px -25px 0 0;
+	}
+
+	@include resp-from(lg) {
+		margin: 0 23px -30px -85px;
+
+		img {
+			width: auto;
+			height: auto;
+		}
+
+		.frame-legend {
+			margin: 130px -15px 0 0;
+		}
 	}
 }
 
@@ -16,55 +41,342 @@
 }
 
 .b-frame-4 {
-	margin-right: 125px;
+	margin-right: 135px;
+
+	img {
+		width: 337px;
+	}
+
+	@include resp-from(lg) {
+		margin-right: 125px;
+
+		img {
+			width: auto;
+			height: auto;
+		}
+	}
 }
 
 .b-frame-5 {
 	margin-right: 10px;
+
+	.frame-card-2 {
+		position: relative;
+		top: -300px;
+		flex-direction: column;
+
+		// .frame-card-2__text
+		&__text {
+			order: -1;
+			margin-left: -35px;
+			margin-bottom: 162px;
+		}
+	}
+
+	img.b-decor {
+		position: absolute;
+		bottom: 0;
+		width: 85px;
+		height: 53px;
+		margin-left: -45px;
+	}
+
+	@include resp-from(lg) {
+		.frame-card-2 {
+			position: static;
+			top: 0;
+			flex-direction: row;
+
+			// .frame-card-2__text
+			&__text {
+				order: 1;
+				margin: 0;
+			}
+		}
+
+		img.b-decor {
+			position: static;
+			width: auto;
+			height: auto;
+			margin-left: 0;
+		}
+	}
 }
 
 .b-frame-6 {
+	margin-left: -80px;
+
+	img.b-decor {
+		width: 152px;
+		margin-bottom: -59px;
+	}
+
+	@include resp-from(lg) {
+		margin-left: 0;
+
+		img.b-decor {
+			width: auto;
+			margin: 0;
+		}
+	}
 }
 
 .b-frame-7 {
-	margin-right: 45px;
+	margin-right: 80px;
 	max-width: 639px;
+
+	.frame-body {
+		max-width: 270px;
+	}
+
+	.block-author_photo {
+		position: absolute;
+		bottom: 0;
+	}
+
+	@include resp-to(lg) {
+		a {
+			gap: 0 !important;
+		}
+
+		.frame-header {
+			margin-bottom: 16px;
+		}
+	}
+
+	@include resp-from(lg) {
+		margin-right: 45px;
+
+		.frame-body {
+			max-width: none;
+		}
+
+		.block-author_photo {
+			position: static;
+		}
+	}
 }
 
 .b-frame-8 {
-	margin-right: 120px;
+	margin-right: 40px;
+
+	svg {
+		&:nth-of-type(1) {
+			width: 68px;
+			height: 32px;
+		}
+		&:nth-of-type(2) {
+			width: 59px;
+			height: 39px;
+		}
+		&:nth-of-type(3) {
+			width: 51px;
+			height: 31px;
+		}
+	}
+
+	@include resp-to(lg) {
+		align-items: start !important;
+
+		svg {
+			margin-bottom: 10px !important;
+		}
+	}
+
+	@include resp-from(lg) {
+		margin-right: 120px;
+
+		svg {
+			width: auto;
+			height: auto;
+		}
+	}
 }
 
 .b-frame-9 {
-	margin-right: 75px;
-	max-width: 310px;
+	margin-right: 10px;
+	max-width: 200px;
+
+	@include resp-from(lg) {
+		margin-right: 75px;
+		max-width: 310px;
+	}
 }
 
 .b-frame-10 {
-	margin-right: 10px;
 	max-width: 1524px;
 
 	a + div {
-		margin-left: -20%;
+		position: relative;
+		margin-left: -11%;
+
+		img {
+			max-width: 876px;
+		}
+
+		.frame-legend {
+			position: absolute;
+			top: 25px;
+			right: 70px;
+		}
+	}
+
+	a {
+		img {
+			height: 200px;
+			object-fit: cover;
+		}
+
+		.frame-legend {
+			margin-left: 58px;
+		}
+	}
+
+	@include resp-from(lg) {
+		margin-right: 10px;
+
+		a + div {
+			margin-left: -20%;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		a {
+			img {
+				height: auto;
+			}
+			.frame-legend {
+				margin-left: 0;
+			}
+		}
 	}
 }
 
 .b-frame-11 {
-	margin-right: 40px;
+	position: relative;
+	margin-left: -23px;
+	margin-right: 80px;
 	max-width: 330px;
+
+	.frame-body {
+		max-width: 245px;
+	}
+
+	div.b-decor {
+		position: absolute;
+		left: -90px;
+		bottom: 0;
+		width: 135px;
+	}
+
+	@include resp-from(lg) {
+		margin-left: 0;
+		margin-right: 40px;
+
+		.frame-body {
+			max-width: none;
+		}
+
+		div.b-decor {
+			position: static;
+			width: auto;
+		}
+	}
 }
 
 .b-frame-12 {
 	margin-right: 60px;
+
+	img {
+		height: 200px;
+		object-fit: cover;
+	}
+
+	@include resp-from(lg) {
+		img {
+			height: auto;
+		}
+	}
 }
 
 .b-frame-13 {
-	margin-right: 145px;
+	position: relative;
+	margin-right: 25px;
+
+	svg {
+		width: 240px;
+		height: 145px;
+		bottom: -14px;
+		left: -150px;
+	}
+
+	@include resp-from(lg) {
+		margin-right: 145px;
+
+		svg {
+			width: auto;
+			height: auto;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+
+.architecture {
+	display: flex;
+	justify-content: flex-end;
+	gap: 24px;
+	margin-top: 20px;
+
+	@include resp-from(lg) {
+		display: block;
+	}
+
+	// .architecture__col
+	&__col {
+		&:first-child {
+			width: 71px;
+
+			@include resp-from(lg) {
+				width: auto;
+			}
+		}
+	}
 }
 
 .b-frame-14 {
+	margin-right: 24px;
+	max-width: 268px;
+	z-index: 1;
+
+	.frame-body {
+		max-width: 245px;
+	}
+
+	.dynamic-adapt {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		gap: 24px;
+		margin-bottom: 17px;
+
+		svg {
+			width: 51px;
+			height: 33px;
+			margin: 0 0 16px !important;
+		}
+	}
+
+	@include resp-from(lg) {
 	margin-right: 47px;
 	max-width: 335px;
+
+		.frame-body {
+			max-width: none;
+		}
+	}
 }
 
 .b-frame-15 {

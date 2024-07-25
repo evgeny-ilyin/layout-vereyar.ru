@@ -11,13 +11,13 @@
 			</a>
 			<a href="javascript:void(0)" class="d-flex align-items-end no-decoration" data-fancybox data-src="#modalTop1">
 				<img src="@img/main-top/top-img-1.jpg" class="circle mw-110" width="150" height="150" alt="">
-				<div class="frame-legend">северное<br>сияние</div>
+				<div class="frame-legend visible-md">северное<br>сияние</div>
 			</a>
 		</div>
 
 		<div class="t-frame-2 d-flex align-items-end">
 			<a href="javascript:void(0)" class="d-flex align-items-center justify-content-center modal-video" aria-label="Вереяр видео">
-				<svg class="modal-video-btn">
+				<svg viewBox="0 0 90 90" class="modal-video-btn">
 					<circle cx="45" cy="45" r="45" fill-opacity=".6" />
 					<path d="M71 45 32 67.517V22.483L71 45Z" />
 				</svg>
@@ -41,7 +41,7 @@
 
 		<div class="t-frame-5 d-flex flex-column justify-content-between">
 			<div class="d-flex align-items-center">
-				<img src="@img/main-top/top-img-5.png" width="197" height="211" alt="">
+				<img src="@img/main-top/top-img-5.png" width="160" height="135" alt="">
 				<div class="frame-legend">морошка</div>
 			</div>
 			<div class="frame-header text-right">
@@ -105,7 +105,7 @@
 		<div class="t-frame-12 d-flex align-items-end">
 			<div class="frame-card-2 mb-4">
 				<div class="frame-card-2__text">
-					<div class="frame-card-2__body">Курорт &laquo;Вереяр&raquo; предлагает гостям широкое разнообразие вариантов размещения: гостиницы, коттеджи, зона глэмпинга. Возможность приехать в Карелию на отдых или остаться навсегда в своём собственном коттедже в комфортабельном посёлке на территории курорта.</div>
+					<div class="frame-card-2__body">Курорт &laquo;Вереяр&raquo; предлагает гостям широкое разнообразие вариантов размещения: гостиницы, коттеджи, зона глэмпинга. Возможность приехать в Карелию на отдых или остаться навсегда в своём собственном коттедже в комфортабельном посёлке на&nbsp;территории курорта.</div>
 				</div>
 				<div class="frame-card-2__img">
 					<img src="@img/main-top/top-img-12.jpg" width="295" height="200" alt="" loading="lazy">
@@ -143,7 +143,11 @@
 		<div class="t-frame-16 d-flex flex-column justify-content-end">
 			<div class="d-flex align-items-end gap-3">
 				<div class="frame-legend">традиционные <br>избы Севера <br>и концепт <br>архитектуры <br>курорта</div>
-				<img src="@img/main-top/top-img-16.jpg" class="mw-375" width="635" height="270" alt="" loading="lazy">
+				<picture>
+					<source media="(min-width: 1024px)" srcset="@img/main-top/top-img-16-1024.webp" type="image/webp">
+					<source srcset="@img/main-top/top-img-16-320.webp" type="image/webp">
+					<img src="@img/main-top/top-img-16-1024.jpg" width="635" height="270" alt="" loading="lazy">
+				</picture>
 			</div>
 		</div>
 
@@ -165,6 +169,7 @@
 				<img src="@img/main-top/top-img-19.jpg" class="mw-117 mb-2" width="160" height="160" alt="" loading="lazy">
 				<div class="frame-legend">банный комплекс</div>
 			</div>
+			<div class="dynamic-adapt hidden-lg"></div>
 		</div>
 
 		<div class="t-frame-20 d-flex flex-column justify-content-start">
@@ -396,17 +401,17 @@
 					<div class="frame-card-2__body">В основе &mdash; концепция комплексного подхода к восстановлению ресурсов человека, его эмоционального и физического состояния через впечатления и грамотно разработанную стратегию рекреации. Рекреационный потенциал этой территории до сих пор не раскрыт.</div>
 				</div>
 			</div>
-			<img src="@img/main-bottom/bot-img-5-2.png" width="112" height="75" alt="" loading="lazy">
+			<img src="@img/main-bottom/bot-img-5-2.png" class="b-decor" width="112" height="75" alt="" loading="lazy">
 		</div>
 
 		<div class="b-frame-6 d-flex align-items-end">
-			<img src="@img/main-bottom/bot-img-6.png" width="204" height="220" alt="" loading="lazy">
+			<img src="@img/main-bottom/bot-img-6.png" class="b-decor" width="204" height="220" alt="" loading="lazy">
 		</div>
 
 		<div class="b-frame-7 d-flex align-items-start">
 			<a href="javascript:void(0)" class="d-flex gap-5 no-decoration frame-block-link">
 				<div class="d-flex flex-column justify-content-between">
-					<div class="frame-header">
+					<div class="frame-header visible-lg">
 						Концепция
 					</div>
 					<div class="d-flex block-author block-author_photo">
@@ -414,6 +419,9 @@
 					</div>
 				</div>
 				<div class="d-flex flex-column justify-content-between">
+					<div class="frame-header hidden-lg">
+						Концепция
+					</div>
 					<div class="frame-body">
 						<svg width="24" height="16" class="icon-quote">
 							<use xlink:href="#main-icon-quote"></use>
@@ -464,6 +472,7 @@
 				</div>
 			</a>
 			<div>
+				<div class="frame-legend hidden-lg">план курорта</div>
 				<img src="@img/main-bottom/bot-img-10-2.png" width="1193" height="459" alt="" loading="lazy">
 			</div>
 		</div>
@@ -473,31 +482,34 @@
 				<div class="frame-header mb-4">
 					Архитектура
 				</div>
-				<div class="frame-body fz-20">
+				<div class="frame-body fz-13-20">
 					Особый дизайн-код, благоустройство и озеленение, фасады и малые архитектурные формы &mdash; всё будет созвучно аутентичности Карелии.
 				</div>
 			</a>
-			<div class="d-flex justify-content-end">
+			<div class="d-flex justify-content-end b-decor">
 				<img src="@img/main-bottom/bot-img-11.png" width="185" height="140" alt="" loading="lazy">
 			</div>
 		</div>
 
 		<div class="b-frame-12 d-flex align-items-start">
 			<a href="javascript:void(0)" class="frame-image-link">
-				<img src="@img/main-bottom/bot-img-12.jpg" width="512" height="250" alt="" loading="lazy" aria-label="Вереяр фотогалерея страница">
+				<img src="@img/main-bottom/bot-img-12.jpg" class="mw-375" width="512" height="250" alt="" loading="lazy" aria-label="Вереяр фотогалерея">
 			</a>
 		</div>
 
 		<div class="b-frame-13 d-flex flex-column justify-content-between">
-			<div>
-				<div class="block-header mb-1">600</div>
-				<div class="block-legend mb-4">номерной фонд <br>гостиниц</div>
+			<div class="architecture" data-da=".b-frame-11,1023,1">
+				<div class="architecture__col">
+					<div class="block-header mb-1">600</div>
+					<div class="block-legend mb-4">номерной фонд <br>гостиниц</div>
+				</div>
+				<div class="architecture__col">
+					<div class="block-header mb-1">15 тыс. м<sup>2</sup></div>
+					<div class="block-legend mb-6">гостиницы 4*</div>
 
-				<div class="block-header mb-1">15 тыс. м<sup>2</sup></div>
-				<div class="block-legend mb-6">гостиницы 4*</div>
-
-				<div class="block-header mb-1">21 тыс. м<sup>2</sup></div>
-				<div class="block-legend mb-6">гостиницы 3*</div>
+					<div class="block-header mb-1">21 тыс. м<sup>2</sup></div>
+					<div class="block-legend mb-6">гостиницы 3*</div>
+				</div>
 			</div>
 			<svg width="333" height="129" class="absolute bottom ml-3">
 				<use xlink:href="#bot-img-13"></use>
@@ -513,6 +525,7 @@
 					Бальнеология станет настоящей изюминкой курорта и сделает его привлекательным в любое время года, ведь марциальные воды, обладая высокой концентрацией двухвалентного активного железа, способствуют профилактике болезней и быстрому восстановлению.
 				</div>
 			</a>
+			<div class="dynamic-adapt hidden-lg"></div>
 		</div>
 
 		<div class="b-frame-15 d-flex flex-column align-items-end">
@@ -529,16 +542,21 @@
 				</div>
 			</div>
 			<div class="d-flex">
-				<svg width="70" height="43" class="mt-4">
+				<svg width="70" height="43" class="mt-4" data-da=".b-frame-14 .dynamic-adapt,1023,0">
 					<use xlink:href="#main-icon-lotus"></use>
 				</svg>
 			</div>
 		</div>
 
 		<div class="b-frame-16 d-flex flex-column justify-content-center">
-			<div class="block-header mb-1">3,6 тыс. м<sup>2</sup></div>
-			<div class="block-legend mb-3">площадь <br>бальнеокомплекса</div>
-			<img src="@img/main-bottom/bot-img-16.jpg" class="mw-117 mt-2" width="160" height="160" alt="" loading="lazy">
+			<div data-da=".b-frame-14 .dynamic-adapt,1023,1">
+				<div class="block-header mb-1">3,6 тыс. м<sup>2</sup></div>
+				<div class="block-legend mb-3">площадь <br>бальнеокомплекса</div>
+			</div>
+			<picture data-da=".t-frame-19 .dynamic-adapt,1023,1">
+				<source srcset="@img/main-bottom/bot-img-16.webp" type="image/webp">
+				<img src="@img/main-bottom/bot-img-16.jpg" class="mw-117 mb-2" width="160" height="160" alt="" loading="lazy">
+			</picture>
 		</div>
 
 		<div class="b-frame-17 d-flex align-items-end">

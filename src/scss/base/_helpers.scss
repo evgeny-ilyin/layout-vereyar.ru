@@ -46,6 +46,13 @@
 	display: none !important;
 }
 
+// .hidden-md
+// .hidden-md {
+// 	@include resp-from(md) {
+// 		display: none !important;
+// 	}
+// }
+
 // .hidden-lg
 .hidden-lg {
 	@include resp-from(lg) {
@@ -60,6 +67,14 @@
 		}
 	}
 }
+
+// .visible-md
+// .visible-md {
+// 	display: none !important;
+// 	@include resp-from(md) {
+// 		display: block !important;
+// 	}
+// }
 
 // .visible-lg
 .visible-lg {
@@ -500,8 +515,8 @@
 /**
  * Font sizes
  */
-.fz-20 {
-	font-size: rem(14) !important;
+.fz-13-20 {
+	font-size: rem(13) !important;
 
 	@include resp-from(lg) {
 		font-size: rem(20) !important;

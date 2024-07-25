@@ -136,3 +136,27 @@ export function closeMenuHandler() {
 		}
 	});
 }
+
+export function collapseHeaderElements() {
+	const isCollapsedClass = "is-collapsed";
+
+	let elements = ["header__slogan", "header__support"],
+		mediaTo = 768,
+		mq = window.matchMedia(`(max-width: ${mediaTo - 1}px)`);
+		
+	["load", "resize"].forEach((evt) =>
+		window.addEventListener(evt, () => {
+			elements.forEach((el) => {
+				if (mq.matches) {
+					document.querySelector(`.${el}`).classList.add(isCollapsedClass);
+					// document.querySelector(`.${el}`).style.height = 0;
+					// document.querySelector(`.${el}`).style.marginTop = 0;
+				} else {
+					document.querySelector(`.${el}`).classList.remove(isCollapsedClass);
+					// document.querySelector(`.${el}`).style.height = "";
+					// document.querySelector(`.${el}`).style.marginTop = "";
+				}
+			});
+		})
+	);
+}

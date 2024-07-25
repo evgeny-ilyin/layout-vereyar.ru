@@ -1,8 +1,13 @@
 .modal-video {
 	.modal-video-btn {
-		width: 90px;
-		height: 90px;
+		width: 66px;
+		height: 66px;
 		position: absolute;
+
+		@include resp-from(lg) {
+			width: 90px;
+			height: 90px;
+		}
 
 		& > * {
 			transition: all $transition-default;

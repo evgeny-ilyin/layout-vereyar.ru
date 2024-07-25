@@ -6,8 +6,13 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-around;
-		gap: 25px;
 		margin-top: 55px;
+		gap: 25px;
+		// gap: 25px 0;
+
+		// @include resp-from(md) {
+		// 	gap: 25px;
+		// }
 	}
 
 	// .partners__item

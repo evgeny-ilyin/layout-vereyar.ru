@@ -2,7 +2,12 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 .header {
+	--height-transition: 5s;
 	border-bottom: 2px solid $gray-dark;
+
+	.is-collapsed {
+		height: 0;
+	}
 
 	// .header__wrapper
 	&__wrapper {
@@ -11,10 +16,11 @@
 		justify-content: space-between;
 		align-items: center;
 		position: relative;
-		padding: 20px 0;
-		gap: 10px 5px;
+		padding: 10px 0;
+		gap: 0 5px;
 
 		@include resp-from(md) {
+			padding: 20px 0;
 			flex-wrap: nowrap;
 			justify-content: initial;
 			gap: 30px;
@@ -28,10 +34,11 @@
 	// .header__logo
 	&__logo {
 		width: 80%;
-		// max-width: 469px;
+		margin: 10px 0;
 
 		@include resp-from(md) {
 			width: auto;
+			margin: 0;
 		}
 
 		a {
@@ -77,6 +84,14 @@
 			max-width: 250px;
 		}
 
+		@include resp-to(md) {
+			display: flex;
+			align-items: center;
+			height: 43px;
+			overflow: hidden;
+			transition: height $transition-default var(--height-transition);
+		}
+
 		@include resp-from(md) {
 			max-width: 27vw;
 			max-width: 27dvw;
@@ -97,6 +112,12 @@
 	&__support {
 		display: flex;
 		order: 2;
+
+		@include resp-to(md) {
+			height: 43px;
+			overflow: hidden;
+			transition: height $transition-default var(--height-transition);
+		}
 
 		@include resp-from(md) {
 			margin-left: auto;
