@@ -19,8 +19,11 @@
 	img {
 		max-width: 316px;
 		height: 200px;
+		object-fit: cover;
+	}
 
-		@include resp-from(lg) {
+	@include resp-from(lg) {
+		img {
 			max-width: none;
 			height: auto;
 		}
@@ -358,8 +361,6 @@
 }
 
 .t-frame-20 {
-	margin-right: 135px;
-
 	img {
 		width: 146px;
 		height: 129px;
@@ -368,6 +369,8 @@
 	}
 
 	@include resp-from(lg) {
+		margin-right: 135px;
+
 		img {
 			width: auto;
 			height: auto;
@@ -378,13 +381,42 @@
 
 .t-frame-21 {
 	margin-right: 148px;
+	margin-left: -53px;
+
+	@include resp-from(lg) {
+		margin-left: 0;
+	}
 }
 
 .t-frame-22 {
-	margin-right: 60px;
+	margin-right: 8px;
 
 	svg {
 		margin-top: -15px;
+	}
+
+	@include resp-to(lg) {
+		.d-flex {
+			flex-direction: column;
+			gap: 11px !important;
+		}
+
+		svg {
+			width: 59px;
+			height: 41px;
+		}
+
+		.block-legend.mb-4 {
+			margin-bottom: 17px !important;
+		}
+
+		.block-legend.mb-6 {
+			margin-bottom: 24px !important;
+		}
+	}
+
+	@include resp-from(lg) {
+		margin-right: 60px;
 	}
 }
 
@@ -394,39 +426,85 @@
 	img {
 		margin-left: 45px;
 	}
+
+	@include resp-to(lg) {
+		img {
+			margin-left: -17px;
+			width: 143px;
+			height: 154px;
+		}
+
+		.block-legend.mb-6 {
+			margin-bottom: 24px !important;
+		}
+	}
 }
 
 .t-frame-24 {
-	margin-right: 193px;
+	margin-right: 25px;
+
+	img {
+		height: 200px;
+		object-fit: cover;
+	}
+
+	@include resp-from(lg) {
+		margin-right: 193px;
+
+		img {
+			max-width: none;
+			height: auto;
+		}
+	}
 }
 
 .t-frame-25 {
-	margin-right: 65px;
+	margin-right: 34px;
+
+	@include resp-from(lg) {
+		margin-right: 65px;
+	}
 }
 
 .t-frame-26 {
-	margin-right: 43px;
+	margin-right: 34px;
+
+	@include resp-from(lg) {
+		margin-right: 43px;
+	}
 }
 
 .t-frame-27 {
-	margin-right: 75px;
+	margin-right: 35px;
+
+	@include resp-from(lg) {
+		margin-right: 75px;
+	}
 }
 
 .t-frame-28 {
-	margin-right: 350px;
+	margin-right: 90px;
+
+	@include resp-from(lg) {
+		margin-right: 350px;
+	}
 }
 
 .t-frame-29 {
-	margin-right: 80px;
+	margin-right: 69px;
 
 	& > div > div {
 		&:nth-child(1) {
 			svg {
-				margin-bottom: 20px;
+				width: 59px;
+				height: 39px;
+				margin-bottom: 5px;
 			}
 		}
 		&:nth-child(2) {
 			svg {
+				width: 59px;
+				height: 35px;
 				margin-bottom: 6px;
 			}
 		}
@@ -435,17 +513,85 @@
 	.block-legend {
 		margin-bottom: 0;
 	}
+
+	@include resp-from(lg) {
+		margin-right: 80px;
+
+		& > div > div {
+			&:nth-child(1) {
+				svg {
+					width: auto;
+					height: auto;
+					margin-bottom: 20px;
+				}
+			}
+			&:nth-child(2) {
+				svg {
+					width: auto;
+					height: auto;
+					margin-bottom: 6px;
+				}
+			}
+		}
+	}
 }
 
 .t-frame-30 {
-	margin-right: 55px;
+	margin-right: 79px;
+
+	img {
+		height: 200px;
+		object-fit: cover;
+	}
+
+	@include resp-from(lg) {
+		margin-right: 55px;
+
+		img {
+			max-width: none;
+			height: auto;
+		}
+	}
 }
 
 .t-frame-31 {
-	margin-right: 140px;
+	margin-right: 85px;
+
+	& > div {
+		max-width: 216px;
+	}
+
+	& > div > div {
+		&:nth-child(1) {
+			svg {
+				width: 71px;
+				height: 48px;
+			}
+		}
+		&:nth-child(2) {
+			svg {
+				width: 63px;
+				height: 41px;
+				margin-bottom: 6px;
+			}
+		}
+	}
 
 	.block-legend {
 		margin-bottom: 0;
+	}
+
+	@include resp-from(lg) {
+		margin-right: 140px;
+
+		& > div {
+			max-width: none;
+		}
+
+		svg {
+			width: auto !important;
+			height: auto !important;
+		}
 	}
 }
 
@@ -454,6 +600,18 @@
 	img {
 		height: 100%;
 		object-fit: cover;
-		width: auto;
+	}
+
+	@include resp-from(lg) {
+		picture,
+		img {
+			width: auto;
+		}
+	}
+}
+
+.t-frame-33 {
+	img {
+		margin: 45px 0 0 88px;
 	}
 }

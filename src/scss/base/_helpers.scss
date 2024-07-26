@@ -84,6 +84,14 @@
 	}
 }
 
+// .visible-lg-flex
+.visible-lg-flex {
+	display: none !important;
+	@include resp-from(lg) {
+		display: flex !important;
+	}
+}
+
 /**
  * Other
  */

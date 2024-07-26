@@ -370,8 +370,8 @@
 	}
 
 	@include resp-from(lg) {
-	margin-right: 47px;
-	max-width: 335px;
+		margin-right: 47px;
+		max-width: 335px;
 
 		.frame-body {
 			max-width: none;
@@ -380,46 +380,136 @@
 }
 
 .b-frame-15 {
-	margin-right: 74px;
-	.frame-card-1 {
-		max-width: 585px;
-	}
+	margin-right: 42px;
+
 	svg {
 		margin-right: -35px;
+	}
+
+	@include resp-from(lg) {
+		margin-right: 74px;
+
+		.frame-card-1 {
+			max-width: 585px;
+		}
 	}
 }
 
 .b-frame-16 {
-	margin-right: 78px;
+	@include resp-from(lg) {
+		margin-right: 78px;
+	}
 }
 
 .b-frame-17 {
+	img {
+		width: 101px;
+		height: 59px;
+	}
+
+	@include resp-from(lg) {
+		img {
+			width: auto;
+			height: auto;
+		}
+	}
 }
 
 .b-frame-18 {
-	max-width: 400px;
+	max-width: 310px;
+	margin-left: -101px;
+
+	.frame-body {
+		max-width: 225px;
+	}
+
+	@include resp-from(lg) {
+		max-width: 400px;
+		margin: 0;
+
+		.frame-body {
+			max-width: none;
+		}
+	}
 }
 
 .b-frame-19 {
+	a {
+		margin-top: 15px;
+		margin-left: -195px;
+	}
+
 	img {
-		margin-left: -180px;
+		width: auto;
+		height: 264px;
+	}
+
+	@include resp-from(lg) {
+		a {
+			margin-left: -180px;
+		}
+
+		img {
+			height: 352px;
+		}
 	}
 }
 
 .b-frame-20 {
-	margin-right: 26px;
+	margin-right: 37px;
+
+	a {
+		margin-left: -12px;
+	}
+
+	img {
+		width: 127px;
+		margin-bottom: -50px;
+	}
+
+	@include resp-to(lg) {
+		.frame-header {
+			font-size: rem(24);
+			margin-left: 0 !important;
+		}
+	}
+
+	@include resp-from(lg) {
+		margin-right: 26px;
+
+		a {
+			margin: 0;
+		}
+
+		img {
+			width: auto;
+			margin-bottom: 0;
+		}
+	}
 }
 
 .b-frame-21 {
-	margin-right: 26px;
+	margin: 93px 8px 0 -150px;
+
+	@include resp-from(lg) {
+		margin: 0 26px 0 0;
+	}
 }
 
 .b-frame-22 {
-	margin-right: 40px;
+	margin-right: 22px;
+
+	@include resp-from(lg) {
+		margin-right: 40px;
+	}
 }
 
 .b-frame-23 {
-	margin-right: 32px;
+	margin-right: 26px;
+
+	@include resp-from(lg) {
+		margin-right: 32px;
+	}
 }
 
 .b-frame-24 {
@@ -427,35 +517,142 @@
 }
 
 .b-frame-25 {
-	margin-right: 46px;
+	margin: 0 260px 0 -390px;
+
+	img {
+		width: 130px;
+		margin-bottom: -15px;
+	}
+
+	@include resp-from(lg) {
+		margin: 0 46px 0 0;
+
+		img {
+			width: auto;
+			margin-bottom: 0;
+		}
+	}
 }
 
 .b-frame-26 {
-	margin-right: 10px;
-	max-width: 750px;
+	a {
+		gap: 139px;
+	}
+
+	.dynamic-adapt-1 {
+		margin-top: 25px;
+		margin-left: 40px;
+	}
+
+	.dynamic-adapt-2 {
+		display: flex;
+		justify-content: flex-end;
+
+		svg {
+			width: 179px;
+		}
+	}
+
+	.frame-body {
+		max-width: 300px;
+	}
+
+	@include resp-from(lg) {
+		margin-right: 10px;
+		max-width: 750px;
+
+		a {
+			gap: 2rem;
+		}
+
+		.frame-body {
+			max-width: none;
+		}
+	}
 }
 
 .b-frame-27 {
-	margin-right: 150px;
+	margin-left: -308px;
+
+	img {
+		width: 72px;
+	}
+
+	@include resp-from(lg) {
+		margin: 0 150px 0 0;
+
+		img {
+			width: auto;
+		}
+	}
 }
 
 .b-frame-28 {
-	margin-right: 34px;
+	margin-right: 281px;
 
 	img {
 		position: relative;
 		top: -180px;
 		right: -70px;
 	}
+
+	@include resp-from(lg) {
+		margin-right: 34px;
+	}
 }
 
 .b-frame-29 {
-	margin-right: 40px;
+	margin-right: 60px;
+
+	svg {
+		width: 355px;
+		height: 335px;
+	}
+
+	@include resp-from(lg) {
+		margin-right: 40px;
+	}
 }
 
 .b-frame-30 {
-	margin-right: 64px;
+	margin-right: 70px;
+
+	@include resp-from(lg) {
+		margin-right: 65px;
+	}
+}
+
+.care {
+	margin-top: -115px;
+	max-width: 280px;
+
+	// .care__header
+	&__header {
+		font-family: $family-primary;
+		font-weight: 500;
+		font-size: rem(19);
+		line-height: 1;
+		letter-spacing: 0.06em;
+		margin-bottom: 15px;
+	}
+
+	// .care__body
+	&__body {
+		margin-bottom: 40px !important;
+	}
+
+	// .care__author
+	&__author {
+		display: flex;
+		gap: 16px;
+	}
 }
 
 .b-frame-31 {
+	._dynamic_adapt_ {
+		img {
+			width: 337px;
+			margin: 0 19px -30px 0;
+		}
+	}
 }

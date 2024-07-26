@@ -254,35 +254,54 @@
 
 .frame-ul {
 	@include when-inside(".main__top") {
-		margin-top: 62px;
+		margin-top: 43px;
+
+		@include resp-from(lg) {
+			margin-top: 62px;
+		}
 	}
 
 	// .frame-ul__header
 	&__header {
 		display: flex;
 		align-items: center;
-		gap: 19px;
+		gap: 16px;
 		font-family: $family-primary;
 		font-weight: 500;
-		font-size: rem(25);
+		font-size: rem(19);
 		line-height: 0.8;
 		letter-spacing: 0.06em;
-		margin-bottom: 10px;
+		margin-bottom: 7px;
+
+		@include resp-from(lg) {
+			gap: 19px;
+			font-size: rem(25);
+			margin-bottom: 10px;
+		}
 	}
 
 	// .frame-ul__list
 	&__list {
-		margin-left: calc(33px + 19px + 6px) !important;
+		margin-left: 42px !important;
 
 		@include when-inside(".main__top") {
 			// margin-bottom: -7px !important;
 		}
 
+		@include resp-from(lg) {
+			margin-left: calc(33px + 19px + 6px) !important;
+		}
+
 		li {
-			font-size: rem(17);
+			font-size: rem(13);
 			line-height: 1.4;
 			list-style-type: disc;
-			margin-bottom: 11px;
+			margin-bottom: 5px;
+
+			@include resp-from(lg) {
+				font-size: rem(17);
+				margin-bottom: 11px;
+			}
 
 			&:last-child {
 				margin-bottom: 0;
@@ -331,6 +350,10 @@
 		@include when-inside(".modal") {
 			margin: 0;
 		}
+
+		@include when-inside(".care") {
+			margin: 0;
+		}
 	}
 
 	// .block-author_data
@@ -352,34 +375,38 @@
 			margin: 0;
 			height: auto;
 		}
+
+		@include when-inside(".care") {
+			margin: 0;
+			height: auto;
+		}
 	}
 
 	// .block-author__name
 	&__name {
+		font-size: rem(14);
 		font-weight: 500;
 
-		@include when-inside(".modal") {
-			font-size: rem(14);
-			font-weight: 600;
+		@include resp-from(lg) {
+			font-size: rem(17);
+		}
 
-			@include resp-from(lg) {
-				font-size: rem(17);
-			}
+		@include when-inside(".modal") {
+			font-weight: 600;
 		}
 	}
 
 	// .block-author__title
 	&__title {
+		font-size: rem(12);
 		color: $gray;
-		font-size: rem(13);
+
+		@include resp-from(lg) {
+			font-size: rem(13);
+		}
 
 		@include when-inside(".modal") {
 			color: $black;
-			font-size: rem(12);
-
-			@include resp-from(lg) {
-				font-size: rem(13);
-			}
 		}
 	}
 }
@@ -424,5 +451,45 @@
 .mw-375 {
 	@include resp-to(lg) {
 		width: 375px;
+	}
+}
+
+.icon-winter {
+	width: 21px;
+	height: 22px;
+
+	@include resp-from(lg) {
+		width: 30px;
+		height: 31px;
+	}
+}
+
+.icon-spring {
+	width: 20px;
+	height: 28px;
+
+	@include resp-from(lg) {
+		width: 27px;
+		height: 38px;
+	}
+}
+
+.icon-summer {
+	width: 19px;
+	height: 19px;
+
+	@include resp-from(lg) {
+		width: 26px;
+		height: 26px;
+	}
+}
+
+.icon-autumn {
+	width: 17px;
+	height: 27px;
+
+	@include resp-from(lg) {
+		width: 23px;
+		height: 37px;
 	}
 }
