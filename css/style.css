@@ -3238,6 +3238,9 @@ ol {
 .visible-lg {
   display: none!important
 }
+.visible-lg-flex {
+  display: none!important
+}
 .nowrap {
   white-space: nowrap
 }
@@ -3969,7 +3972,9 @@ ol {
 }
 .t-frame-2 img {
   max-width: 316px;
-  height: 200px
+  height: 200px;
+  -o-object-fit: cover;
+  object-fit: cover
 }
 .t-frame-3 {
   margin-right: 45px
@@ -4107,9 +4112,6 @@ ol {
   margin-bottom: 10px;
   margin-left: 35px
 }
-.t-frame-20 {
-  margin-right: 135px
-}
 .t-frame-20 img {
   width: 146px;
   height: 129px;
@@ -4117,10 +4119,11 @@ ol {
   left: -410px
 }
 .t-frame-21 {
-  margin-right: 148px
+  margin-right: 148px;
+  margin-left: -53px
 }
 .t-frame-22 {
-  margin-right: 60px
+  margin-right: 8px
 }
 .t-frame-22 svg {
   margin-top: -15px
@@ -4132,37 +4135,63 @@ ol {
   margin-left: 45px
 }
 .t-frame-24 {
-  margin-right: 193px
+  margin-right: 25px
+}
+.t-frame-24 img {
+  height: 200px;
+  -o-object-fit: cover;
+  object-fit: cover
 }
 .t-frame-25 {
-  margin-right: 65px
+  margin-right: 34px
 }
 .t-frame-26 {
-  margin-right: 43px
+  margin-right: 34px
 }
 .t-frame-27 {
-  margin-right: 75px
+  margin-right: 35px
 }
 .t-frame-28 {
-  margin-right: 350px
+  margin-right: 90px
 }
 .t-frame-29 {
-  margin-right: 80px
+  margin-right: 69px
 }
 .t-frame-29 > div > div:nth-child(1) svg {
-  margin-bottom: 20px
+  width: 59px;
+  height: 39px;
+  margin-bottom: 5px
 }
 .t-frame-29 > div > div:nth-child(2) svg {
+  width: 59px;
+  height: 35px;
   margin-bottom: 6px
 }
 .t-frame-29 .block-legend {
   margin-bottom: 0
 }
 .t-frame-30 {
-  margin-right: 55px
+  margin-right: 79px
+}
+.t-frame-30 img {
+  height: 200px;
+  -o-object-fit: cover;
+  object-fit: cover
 }
 .t-frame-31 {
-  margin-right: 140px
+  margin-right: 85px
+}
+.t-frame-31 > div {
+  max-width: 216px
+}
+.t-frame-31 > div > div:nth-child(1) svg {
+  width: 71px;
+  height: 48px
+}
+.t-frame-31 > div > div:nth-child(2) svg {
+  width: 63px;
+  height: 41px;
+  margin-bottom: 6px
 }
 .t-frame-31 .block-legend {
   margin-bottom: 0
@@ -4171,8 +4200,10 @@ ol {
 .t-frame-32 picture {
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
-  width: auto
+  object-fit: cover
+}
+.t-frame-33 img {
+  margin: 45px 0 0 88px
 }
 .m-begin {
   font-family: "TT Firs Neue",Roboto,Helvetica,"Open Sans",Arial,sans-serif;
@@ -4200,28 +4231,43 @@ ol {
   margin-right: 15px
 }
 .m-ornament img:last-child {
-  width: 3020px;
+  width: 1800px;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: 0 0;
   object-position: 0 0
 }
-.m-logo {
-  margin-left: 615px
-}
-.m-logo svg {
-  fill: currentColor;
-  width: 661px;
-  height: 122px
-}
 .m-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 388px
+}
+.m-end__logo {
+  padding: 0 10px
+}
+.m-end__logo svg {
+  fill: currentColor;
+  min-width: 300px;
+  max-width: 332px;
+  height: 61px;
+  width: clamp(300px,90vw,332px)
+}
+.m-end__text {
   font-family: "TT Firs Neue",Roboto,Helvetica,"Open Sans",Arial,sans-serif;
   font-weight: 500;
-  font-size: 1.75rem;
+  font-size: 1.375rem;
   line-height: 1;
   letter-spacing: .06em;
-  padding: 0 23px 0 20px;
-  white-space: nowrap
+  white-space: nowrap;
+  margin-top: 15px
 }
 .b-frame-1 {
   margin-right: 138px;
@@ -4405,50 +4451,88 @@ ol {
   margin: 0 0 16px!important
 }
 .b-frame-15 {
-  margin-right: 74px
-}
-.b-frame-15 .frame-card-1 {
-  max-width: 585px
+  margin-right: 42px
 }
 .b-frame-15 svg {
   margin-right: -35px
 }
-.b-frame-16 {
-  margin-right: 78px
+.b-frame-17 img {
+  width: 101px;
+  height: 59px
 }
 .b-frame-18 {
-  max-width: 400px
+  max-width: 310px;
+  margin-left: -101px
+}
+.b-frame-18 .frame-body {
+  max-width: 225px
+}
+.b-frame-19 a {
+  margin-top: 15px;
+  margin-left: -195px
 }
 .b-frame-19 img {
-  margin-left: -180px
+  width: auto;
+  height: 264px
 }
 .b-frame-20 {
-  margin-right: 26px
+  margin-right: 37px
+}
+.b-frame-20 a {
+  margin-left: -12px
+}
+.b-frame-20 img {
+  width: 127px;
+  margin-bottom: -50px
 }
 .b-frame-21 {
-  margin-right: 26px
+  margin: 93px 8px 0 -150px
 }
 .b-frame-22 {
-  margin-right: 40px
+  margin-right: 22px
 }
 .b-frame-23 {
-  margin-right: 32px
+  margin-right: 26px
 }
 .b-frame-24 {
   margin-right: 67px
 }
 .b-frame-25 {
-  margin-right: 46px
+  margin: 0 260px 0 -390px
 }
-.b-frame-26 {
-  margin-right: 10px;
-  max-width: 750px
+.b-frame-25 img {
+  width: 130px;
+  margin-bottom: -15px
+}
+.b-frame-26 a {
+  gap: 139px
+}
+.b-frame-26 .dynamic-adapt-1 {
+  margin-top: 25px;
+  margin-left: 40px
+}
+.b-frame-26 .dynamic-adapt-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end
+}
+.b-frame-26 .dynamic-adapt-2 svg {
+  width: 179px
+}
+.b-frame-26 .frame-body {
+  max-width: 300px
 }
 .b-frame-27 {
-  margin-right: 150px
+  margin-left: -308px
+}
+.b-frame-27 img {
+  width: 72px
 }
 .b-frame-28 {
-  margin-right: 34px
+  margin-right: 281px
 }
 .b-frame-28 img {
   position: relative;
@@ -4456,10 +4540,39 @@ ol {
   right: -70px
 }
 .b-frame-29 {
-  margin-right: 40px
+  margin-right: 60px
+}
+.b-frame-29 svg {
+  width: 355px;
+  height: 335px
 }
 .b-frame-30 {
-  margin-right: 64px
+  margin-right: 70px
+}
+.care {
+  margin-top: -115px;
+  max-width: 280px
+}
+.care__header {
+  font-family: "TT Firs Neue",Roboto,Helvetica,"Open Sans",Arial,sans-serif;
+  font-weight: 500;
+  font-size: 1.1875rem;
+  line-height: 1;
+  letter-spacing: .06em;
+  margin-bottom: 15px
+}
+.care__body {
+  margin-bottom: 40px!important
+}
+.care__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px
+}
+.b-frame-31 ._dynamic_adapt_ img {
+  width: 337px;
+  margin: 0 19px -30px 0
 }
 .frame-card-1 {
   display: -webkit-box;
@@ -4590,7 +4703,7 @@ ol {
   margin-bottom: -4px
 }
 .main__top .frame-ul {
-  margin-top: 62px
+  margin-top: 43px
 }
 .frame-ul__header {
   display: -webkit-box;
@@ -4599,22 +4712,22 @@ ol {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 19px;
+  gap: 16px;
   font-family: "TT Firs Neue",Roboto,Helvetica,"Open Sans",Arial,sans-serif;
   font-weight: 500;
-  font-size: 1.5625rem;
+  font-size: 1.1875rem;
   line-height: .8;
   letter-spacing: .06em;
-  margin-bottom: 10px
+  margin-bottom: 7px
 }
 .frame-ul__list {
-  margin-left: 58px!important
+  margin-left: 42px!important
 }
 .frame-ul__list li {
-  font-size: 1.0625rem;
+  font-size: .8125rem;
   line-height: 1.4;
   list-style-type: disc;
-  margin-bottom: 11px
+  margin-bottom: 5px
 }
 .frame-ul__list li:last-child {
   margin-bottom: 0
@@ -4642,6 +4755,9 @@ ol {
 .modal .block-author_photo {
   margin: 0
 }
+.care .block-author_photo {
+  margin: 0
+}
 .block-author_data {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4662,26 +4778,45 @@ ol {
   margin: 0;
   height: auto
 }
+.care .block-author_data {
+  margin: 0;
+  height: auto
+}
 .block-author__name {
+  font-size: .875rem;
   font-weight: 500
 }
 .modal .block-author__name {
-  font-size: .875rem;
   font-weight: 600
 }
 .block-author__title {
-  color: var(--seryy);
-  font-size: .8125rem
+  font-size: .75rem;
+  color: var(--seryy)
 }
 .modal .block-author__title {
-  color: var(--grafit-vereyar);
-  font-size: .75rem
+  color: var(--grafit-vereyar)
 }
 .icon-quote {
   position: relative;
   top: 2px;
   width: 17px;
   height: 12px
+}
+.icon-winter {
+  width: 21px;
+  height: 22px
+}
+.icon-spring {
+  width: 20px;
+  height: 28px
+}
+.icon-summer {
+  width: 19px;
+  height: 19px
+}
+.icon-autumn {
+  width: 17px;
+  height: 27px
 }
 .partners {
   padding: 50px 0 90px
@@ -5284,6 +5419,11 @@ ol {
   .visible-lg {
     display: block!important
   }
+  .visible-lg-flex {
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
+    display: flex!important
+  }
   .fz-13-20 {
     font-size: 1.25rem!important
   }
@@ -5439,16 +5579,98 @@ ol {
   .t-frame-19 {
     padding: 0
   }
+  .t-frame-20 {
+    margin-right: 135px
+  }
   .t-frame-20 img {
     width: auto;
     height: auto;
     position: static
+  }
+  .t-frame-21 {
+    margin-left: 0
+  }
+  .t-frame-22 {
+    margin-right: 60px
+  }
+  .t-frame-24 {
+    margin-right: 193px
+  }
+  .t-frame-24 img {
+    max-width: none;
+    height: auto
+  }
+  .t-frame-25 {
+    margin-right: 65px
+  }
+  .t-frame-26 {
+    margin-right: 43px
+  }
+  .t-frame-27 {
+    margin-right: 75px
+  }
+  .t-frame-28 {
+    margin-right: 350px
+  }
+  .t-frame-29 {
+    margin-right: 80px
+  }
+  .t-frame-29 > div > div:nth-child(1) svg {
+    width: auto;
+    height: auto;
+    margin-bottom: 20px
+  }
+  .t-frame-29 > div > div:nth-child(2) svg {
+    width: auto;
+    height: auto;
+    margin-bottom: 6px
+  }
+  .t-frame-30 {
+    margin-right: 55px
+  }
+  .t-frame-30 img {
+    max-width: none;
+    height: auto
+  }
+  .t-frame-31 {
+    margin-right: 140px
+  }
+  .t-frame-31 > div {
+    max-width: none
+  }
+  .t-frame-31 svg {
+    width: auto!important;
+    height: auto!important
+  }
+  .t-frame-32 img,
+  .t-frame-32 picture {
+    width: auto
   }
   .m-begin {
     font-size: 1.5625rem
   }
   .m-ornament {
     height: 165px
+  }
+  .m-ornament img:last-child {
+    width: 3020px
+  }
+  .m-end {
+    margin-left: 615px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row
+  }
+  .m-end__logo svg {
+    width: 661px;
+    min-width: none;
+    max-width: none;
+    height: 122px
+  }
+  .m-end__text {
+    font-size: 1.75rem;
+    padding: 0 23px 0 20px
   }
   .b-frame-1 {
     margin-right: 33px;
@@ -5570,6 +5792,83 @@ ol {
   .b-frame-14 .frame-body {
     max-width: none
   }
+  .b-frame-15 {
+    margin-right: 74px
+  }
+  .b-frame-15 .frame-card-1 {
+    max-width: 585px
+  }
+  .b-frame-16 {
+    margin-right: 78px
+  }
+  .b-frame-17 img {
+    width: auto;
+    height: auto
+  }
+  .b-frame-18 {
+    max-width: 400px;
+    margin: 0
+  }
+  .b-frame-18 .frame-body {
+    max-width: none
+  }
+  .b-frame-19 a {
+    margin-left: -180px
+  }
+  .b-frame-19 img {
+    height: 352px
+  }
+  .b-frame-20 {
+    margin-right: 26px
+  }
+  .b-frame-20 a {
+    margin: 0
+  }
+  .b-frame-20 img {
+    width: auto;
+    margin-bottom: 0
+  }
+  .b-frame-21 {
+    margin: 0 26px 0 0
+  }
+  .b-frame-22 {
+    margin-right: 40px
+  }
+  .b-frame-23 {
+    margin-right: 32px
+  }
+  .b-frame-25 {
+    margin: 0 46px 0 0
+  }
+  .b-frame-25 img {
+    width: auto;
+    margin-bottom: 0
+  }
+  .b-frame-26 {
+    margin-right: 10px;
+    max-width: 750px
+  }
+  .b-frame-26 a {
+    gap: 2rem
+  }
+  .b-frame-26 .frame-body {
+    max-width: none
+  }
+  .b-frame-27 {
+    margin: 0 150px 0 0
+  }
+  .b-frame-27 img {
+    width: auto
+  }
+  .b-frame-28 {
+    margin-right: 34px
+  }
+  .b-frame-29 {
+    margin-right: 40px
+  }
+  .b-frame-30 {
+    margin-right: 65px
+  }
   .frame-card-1__text {
     padding: 21px 43px 24px 27px
   }
@@ -5607,6 +5906,21 @@ ol {
   .frame-legend {
     font-size: .8125rem
   }
+  .main__top .frame-ul {
+    margin-top: 62px
+  }
+  .frame-ul__header {
+    gap: 19px;
+    font-size: 1.5625rem;
+    margin-bottom: 10px
+  }
+  .frame-ul__list {
+    margin-left: 58px!important
+  }
+  .frame-ul__list li {
+    font-size: 1.0625rem;
+    margin-bottom: 11px
+  }
   .block-header {
     font-size: 1.5625rem;
     line-height: .8
@@ -5622,16 +5936,32 @@ ol {
     height: 90px;
     margin-left: 0
   }
-  .modal .block-author__name {
+  .block-author__name {
     font-size: 1.0625rem
   }
-  .modal .block-author__title {
+  .block-author__title {
     font-size: .8125rem
   }
   .icon-quote {
     top: 4px;
     width: auto;
     height: auto
+  }
+  .icon-winter {
+    width: 30px;
+    height: 31px
+  }
+  .icon-spring {
+    width: 27px;
+    height: 38px
+  }
+  .icon-summer {
+    width: 26px;
+    height: 26px
+  }
+  .icon-autumn {
+    width: 23px;
+    height: 37px
   }
   .press__list {
     display: -ms-grid;
@@ -5762,6 +6092,31 @@ ol {
     -ms-flex-pack: start!important;
     justify-content: start!important
   }
+  .t-frame-22 .d-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 11px!important
+  }
+  .t-frame-22 svg {
+    width: 59px;
+    height: 41px
+  }
+  .t-frame-22 .block-legend.mb-4 {
+    margin-bottom: 17px!important
+  }
+  .t-frame-22 .block-legend.mb-6 {
+    margin-bottom: 24px!important
+  }
+  .t-frame-23 img {
+    margin-left: -17px;
+    width: 143px;
+    height: 154px
+  }
+  .t-frame-23 .block-legend.mb-6 {
+    margin-bottom: 24px!important
+  }
   .b-frame-7 a {
     gap: 0!important
   }
@@ -5775,6 +6130,10 @@ ol {
   }
   .b-frame-8 svg {
     margin-bottom: 10px!important
+  }
+  .b-frame-20 .frame-header {
+    font-size: 1.5rem;
+    margin-left: 0!important
   }
   .mw-66 {
     width: 66px

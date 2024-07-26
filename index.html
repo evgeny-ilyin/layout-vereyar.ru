@@ -7,9 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap&v=20240725142826">
-	<link rel="stylesheet" href="css/root-vars.css?v=20240725142826">
-	<link rel="stylesheet" href="css/style.css?v=20240725142826">
+	<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap&v=20240726120920">
+	<link rel="stylesheet" href="css/root-vars.css?v=20240726120920">
+	<link rel="stylesheet" href="css/style.css?v=20240726120920">
 	<title>Вереяр — всесезонный горнолыжный и бальнеологический курорт</title>
 	<meta name="description" content="Вереяр — всесезонный горнолыжный и бальнеологический курорт в Карелии">
 </head>
@@ -317,8 +317,11 @@
 				</div>
 
 				<div class="t-frame-23 d-flex flex-column justify-content-between">
+
 					<picture>
-						<source srcset="img/main-top/top-img-23.webp" type="image/webp"><img src="img/main-top/top-img-23.png" width="258" height="151" alt="" loading="lazy">
+						<source media="(min-width: 1024px)" srcset="img/main-top/top-img-23-1024.webp" type="image/webp">
+						<source srcset="img/main-top/top-img-23-320.webp" type="image/webp">
+						<img src="img/main-top/top-img-23-1024.jpg" width="258" height="151" alt="" loading="lazy">
 					</picture>
 					<div>
 						<div class="block-header mb-1">14</div>
@@ -329,7 +332,7 @@
 				<div class="t-frame-24 d-flex align-items-end">
 					<div class="d-flex">
 						<picture>
-							<source srcset="img/main-top/top-img-24.webp" type="image/webp"><img src="img/main-top/top-img-24.jpg" class="" width="588" height="250" alt="" loading="lazy">
+							<source srcset="img/main-top/top-img-24.webp" type="image/webp"><img src="img/main-top/top-img-24.jpg" class="mw-375" width="588" height="250" alt="" loading="lazy">
 						</picture>
 					</div>
 				</div>
@@ -337,7 +340,7 @@
 				<div class="t-frame-25 d-flex align-items-start">
 					<div class="frame-ul">
 						<div class="frame-ul__header">
-							<svg width="30" height="31">
+							<svg class="icon-winter">
 								<use xlink:href="#main-icon-winter"></use>
 							</svg>
 							Зима
@@ -365,7 +368,7 @@
 				<div class="t-frame-27 d-flex align-items-start">
 					<div class="frame-ul">
 						<div class="frame-ul__header">
-							<svg width="27" height="38">
+							<svg class="icon-spring">
 								<use xlink:href="#main-icon-spring"></use>
 							</svg>
 							Весна
@@ -414,7 +417,7 @@
 				<div class="t-frame-30 d-flex align-items-end">
 					<div class="d-flex">
 						<picture>
-							<source srcset="img/main-top/top-img-30.webp" type="image/webp"><img src="img/main-top/top-img-30.jpg" class="" width="628" height="250" alt="" loading="lazy">
+							<source srcset="img/main-top/top-img-30.webp" type="image/webp"><img src="img/main-top/top-img-30.jpg" class="mw-375" width="628" height="250" alt="" loading="lazy">
 						</picture>
 					</div>
 				</div>
@@ -436,7 +439,7 @@
 							</svg>
 							<div>
 								<div class="block-header mb-1">21 километр</div>
-								<div class="block-legend">новых автомобильных дорог</div>
+								<div class="block-legend">новых автомобильных&nbsp;дорог</div>
 							</div>
 						</div>
 					</div>
@@ -445,10 +448,12 @@
 				<div class="t-frame-32">
 					<div class="d-flex h-100">
 						<picture>
-							<source srcset="img/main-top/top-img-32.webp" type="image/webp"><img src="img/main-top/top-img-32.jpg" class="" width="850" height="331" alt="" loading="lazy">
+							<source srcset="img/main-top/top-img-32.webp" type="image/webp"><img src="img/main-top/top-img-32.jpg" class="mw-375" width="850" height="331" alt="" loading="lazy">
 						</picture>
 					</div>
 				</div>
+
+				<div class="t-frame-33 hidden-lg"></div>
 
 			</div>
 
@@ -459,12 +464,14 @@
 					<img src="img/main-ornament.svg" width="1000" height="165" alt="" loading="lazy">
 					<img src="img/main-ornament.svg" width="1000" height="165" alt="" loading="lazy">
 				</div>
-				<div class="m-logo">
-					<svg>
-						<use xlink:href="#logo"></use>
-					</svg>
+				<div class="m-end">
+					<div class="m-end__logo">
+						<svg>
+							<use xlink:href="#logo"></use>
+						</svg>
+					</div>
+					<div class="m-end__text">Добро пожаловать!</div>
 				</div>
-				<div class="m-end">Добро пожаловать!</div>
 			</div>
 
 			<div class="main__bottom">
@@ -475,7 +482,7 @@
 							<div class="frame-header">
 								Идея
 							</div>
-							<div class="d-flex block-author block-author_photo">
+							<div class="block-author block-author_photo">
 								<picture>
 									<source srcset="img/main-bottom/bot-img-photo-1.webp" type="image/webp"><img src="img/main-bottom/bot-img-photo-1.png" class="mw-66" width="90" height="90" alt="">
 								</picture>
@@ -558,7 +565,7 @@
 							<div class="frame-header visible-lg">
 								Концепция
 							</div>
-							<div class="d-flex block-author block-author_photo">
+							<div class="block-author block-author_photo">
 								<picture>
 									<source srcset="img/main-bottom/bot-img-photo-2.webp" type="image/webp"><img src="img/main-bottom/bot-img-photo-2.png" class="mw-66" width="90" height="90" alt="" loading="lazy">
 								</picture>
@@ -762,7 +769,7 @@
 				<div class="b-frame-22 d-flex">
 					<div class="frame-ul">
 						<div class="frame-ul__header">
-							<svg width="26" height="26">
+							<svg class="icon-summer">
 								<use xlink:href="#main-icon-summer"></use>
 							</svg>
 							Лето
@@ -788,7 +795,7 @@
 				<div class="b-frame-24 d-flex">
 					<div class="frame-ul">
 						<div class="frame-ul__header">
-							<svg width="23" height="37">
+							<svg class="icon-autumn">
 								<use xlink:href="#main-icon-autumn"></use>
 							</svg>
 							Осень
@@ -814,12 +821,13 @@
 				</div>
 
 				<div class="b-frame-26 d-flex align-items-start">
-					<a href="javascript:void(0)" class="d-flex gap-5 no-decoration frame-block-link">
+					<a href="javascript:void(0)" class="d-flex no-decoration frame-block-link">
 						<div class="d-flex flex-column justify-content-between">
 							<div class="frame-header">
 								Устойчивое <br>развитие
 							</div>
-							<div class="d-flex block-author block-author_photo">
+							<div class="dynamic-adapt-1 hidden-lg"></div>
+							<div class="block-author block-author_photo visible-lg">
 								<picture>
 									<source srcset="img/main-bottom/bot-img-photo-2.webp" type="image/webp"><img src="img/main-bottom/bot-img-photo-2.png" class="mw-66" width="90" height="90" alt="" loading="lazy">
 								</picture>
@@ -832,7 +840,8 @@
 								</svg>
 								На этапе проектирования мы учитываем использование экологических строительных материалов, современного очистного оборудования, правильной системы водоотведения, энергоэффективность зданий и сооружений и множество прочих аспектов, которые являются обязательными для сохранения окружающей среды как на этапе строительства, так и эксплуатации.
 							</div>
-							<div class="block-author block-author_data">
+							<div class="dynamic-adapt-2 hidden-lg"></div>
+							<div class="block-author block-author_data visible-lg-flex">
 								<div class="block-author__name">Дмитрий Хан</div>
 								<div class="block-author__title">Генеральный директор ООО <br>&laquo;ГРБК &laquo;Спасская Губа&raquo;</div>
 							</div>
@@ -847,16 +856,19 @@
 				</div>
 
 				<div class="b-frame-28 d-flex flex-column align-items-center">
-					<picture>
-						<source srcset="img/main-bottom/bot-img-28.webp" type="image/webp"><img src="img/main-bottom/bot-img-28.jpg" width="244" height="244" alt="" loading="lazy">
+
+					<picture data-da=".b-frame-26 .dynamic-adapt-1,1023">
+						<source srcset="img/main-bottom/bot-img-28.webp" type="image/webp">
+						<img src="img/main-bottom/bot-img-28.jpg" class="mw-185" width="244" height="244" alt="" loading="lazy">
 					</picture>
-					<svg width="193" height="55">
+
+					<svg width="193" height="55" data-da=".b-frame-26 .dynamic-adapt-2,1023">
 						<use xlink:href="#main-icon-eco-3"></use>
 					</svg>
 				</div>
 
 				<div class="b-frame-29 d-flex">
-					<div class="d-flex align-items-end">
+					<div class="d-flex align-items-end" data-da=".b-frame-31,1023">
 						<picture>
 							<source srcset="img/main-bottom/bot-img-29.webp" type="image/webp"><img src="img/main-bottom/bot-img-29.png" width="369" height="306" alt="" loading="lazy">
 						</picture>
@@ -864,16 +876,38 @@
 				</div>
 
 				<div class="b-frame-30 d-flex">
-					<svg width="407" height="368">
+					<svg width="407" height="368" data-da=".b-frame-29,1023">
 						<use xlink:href="#bot-img-30"></use>
 					</svg>
+					<div class="care hidden-lg">
+						<div class="care__header">
+							Забота о природе Карелии
+						</div>
+						<div class="care__body frame-body">
+							Мы будем следовать &laquo;зелёным&raquo; стандартам на каждом этапе проектирования и строительства. Использование экологически чистых строительных материалов, современных систем водоотведения и энергоэффективности зданий и сооружений, оптимизация режимов эксплуатации &laquo;умный город&raquo; &mdash; всё это и многое другое позволит не только снизить антропогенную нагрузку на экосистему, но и увеличить её экологический потенциал.
+						</div>
+						<div class="care__author">
+							<div class="block-author block-author_photo">
+								<picture>
+									<source srcset="img/main-bottom/bot-img-photo-2.webp" type="image/webp"><img src="img/main-bottom/bot-img-photo-2.png" class="mw-66" width="90" height="90" alt="" loading="lazy">
+								</picture>
+							</div>
+							<div class="block-author block-author_data">
+								<div class="block-author__name">Дмитрий Хан</div>
+								<div class="block-author__title">Генеральный директор ООО <br>&laquo;ГРБК &laquo;Спасская Губа&raquo;</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="b-frame-31 d-flex ml-a">
-					<picture>
-						<source srcset="img/main-bottom/bot-img-31.webp" type="image/webp"><img src="img/main-bottom/bot-img-31.jpg" class="mw-185" width="250" height="250" alt="" loading="lazy">
-					</picture>
+					<div data-da=".t-frame-33,1023">
+						<picture>
+							<source srcset="img/main-bottom/bot-img-31.webp" type="image/webp"><img src="img/main-bottom/bot-img-31.jpg" class="mw-185" width="250" height="250" alt="" loading="lazy">
+						</picture>
+					</div>
 				</div>
+
 
 			</div>
 
@@ -1549,8 +1583,8 @@
 		</symbol>
 	</svg>
 	<!-- Укажите свой API-ключ. Тестовый ключ НЕ БУДЕТ работать на других сайтах. -->
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=4099eef8-9005-4e17-bad7-b20a671b0ca3&v=20240725142826"></script>
-	<script src="js/app.js?v=20240725142826"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=4099eef8-9005-4e17-bad7-b20a671b0ca3&v=20240726120920"></script>
+	<script src="js/app.js?v=20240726120920"></script>
 	<script>
 		let data = {
 			"pointerIcon": "img/icon-map-pointer.svg",
