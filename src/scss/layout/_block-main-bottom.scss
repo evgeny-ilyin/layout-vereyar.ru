@@ -206,7 +206,11 @@
 .b-frame-10 {
 	max-width: 1524px;
 
-	a + div {
+	& > a {
+		height: 230px;
+	}
+
+	& > a + div {
 		position: relative;
 		margin-left: -11%;
 
@@ -221,7 +225,7 @@
 		}
 	}
 
-	a {
+	& > a {
 		img {
 			height: 200px;
 			object-fit: cover;
@@ -235,7 +239,11 @@
 	@include resp-from(lg) {
 		margin-right: 10px;
 
-		a + div {
+		& > a {
+			height: 300px;
+		}
+
+		& > a + div {
 			margin-left: -20%;
 
 			img {
@@ -243,7 +251,7 @@
 			}
 		}
 
-		a {
+		& > a {
 			img {
 				height: auto;
 			}

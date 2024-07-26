@@ -10,9 +10,9 @@
 @import "vendors/normalize";
 @import "vendors/reset";
 @import "~@fancyapps/ui/dist/fancybox/fancybox";
-@import "components/fancyapps-settings";
+@import "vendors/fancyapps-settings";
 @import "vendors/swiper";
-@import "components/swiper-settings";
+@import "vendors/swiper-settings";
 
 // 3. Base stuff
 @import "base/base";
