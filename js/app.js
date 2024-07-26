@@ -187,9 +187,9 @@ function collapseHeaderElements() {
  */
 function useDynamicAdapt(type = 'max') {
 
-  if(navigator.userAgentData && navigator.userAgentData.brands.length) {
-    if (navigator.userAgentData.brands[2].brand.indexOf("ghtho") > -1) return;
-  }
+  // if(navigator.userAgentData && navigator.userAgentData.brands.length) {
+  //   if (navigator.userAgentData.brands[2].brand.indexOf("ghtho") > -1) return;
+  // }
 
   const className = '_dynamic_adapt_'
   const attrName = 'data-da'
