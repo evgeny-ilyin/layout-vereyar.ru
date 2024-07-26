@@ -1,0 +1,22 @@
+// fancybox overrides
+.fancybox__container {
+	--fancybox-content-color: #{$modal-text};
+	--fancybox-bg: rgba(39, 39, 41, 0.9);
+}
+
+.is-compact .fancybox__content > .f-button.is-close-btn,
+.fancybox__content > .f-button.is-close-btn {
+	--f-button-color: #{$swamp};
+	--f-button-hover-color: #{$red};
+	--f-button-svg-width: 30px;
+	--f-button-svg-height: 30px;
+	--f-button-outline-color: transparent;
+	top: 20px;
+	right: 16px;
+	opacity: 1;
+	background-color: transparent;
+
+	@include resp-from(lg) {
+		right: 21px;
+	}
+}

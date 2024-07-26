@@ -1,0 +1,20 @@
+.swiper-press {
+	padding-bottom: 50px;
+	--swiper-theme-color: #{$green};
+	--swiper-pagination-bullet-inactive-color: #{$swamp};
+	--swiper-pagination-bullet-inactive-opacity: 0.5;
+	--swiper-pagination-bullet-size: 10px;
+	--swiper-pagination-bullet-horizontal-gap: 5px;
+
+	.swiper-slide {
+		height: auto;
+	}
+
+	.swiper-pagination-bullet {
+		transition: all $transition-default;
+
+		@include on-hover {
+			--swiper-pagination-bullet-inactive-opacity: 1;
+		}
+	}
+}
