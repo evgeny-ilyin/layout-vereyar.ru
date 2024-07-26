@@ -6,7 +6,7 @@ let swiperPressInit = false,
 	swiperPress;
 
 function swiperPressHandler() {
-	if (window.innerWidth < 1024) {
+	if (window.outerWidth < 1024) {
 		if (!swiperPressInit) {
 			swiperPressInit = true;
 			swiperPress = new Swiper(".swiper-press", {
@@ -37,3 +37,11 @@ function swiperPressHandler() {
 		swiperPressHandler();
 	})
 );
+
+// addEventListener("DOMContentLoaded", () => {
+	// window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
+		// swiperPressHandler();
+		// const portrait = e.matches;
+		// if (portrait) {}
+// 	});
+// });

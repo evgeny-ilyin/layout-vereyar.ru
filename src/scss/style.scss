@@ -10,10 +10,9 @@
 @import "vendors/normalize";
 @import "vendors/reset";
 @import "~@fancyapps/ui/dist/fancybox/fancybox";
-@import "~@fancyapps/ui/dist/carousel/carousel";
-@import "vendors/fancyapps-vars-overrides";
-
-@import "vendors/swiper"; // сменить на fancy
+@import "components/fancyapps-settings";
+@import "vendors/swiper";
+@import "components/swiper-settings";
 
 // 3. Base stuff
 @import "base/base";
@@ -38,7 +37,6 @@
 @import "components/buttons";
 @import "components/modal";
 @import "components/svg-sprite";
-@import "components/swiper";
 
 // 6. Page-specific styles
 @import "pages/home";
