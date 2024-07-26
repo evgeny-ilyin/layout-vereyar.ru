@@ -2585,7 +2585,7 @@ ol {
   overflow: hidden
 }
 .scrollblock.scroll-x {
-  overflow-x: scroll
+  overflow-x: auto
 }
 .scrollblock.scroll-x::-webkit-scrollbar-track {
   border-bottom: 2px solid var(--gray-light)
@@ -2594,7 +2594,7 @@ ol {
   border-bottom: 7px solid var(--krasnyy-vereyar)
 }
 .scrollblock.scroll-y {
-  overflow-y: scroll
+  overflow-y: auto
 }
 .scrollblock.scroll-y::-webkit-scrollbar-track {
   border-right: 2px solid var(--gray-light)
@@ -3408,7 +3408,8 @@ ol {
 .t-frame-16 .frame-legend {
   position: absolute;
   right: -7%;
-  bottom: 60%
+  bottom: 60%;
+  z-index: 1
 }
 .t-frame-16 img {
   width: 395px
@@ -3676,24 +3677,27 @@ ol {
 .b-frame-10 {
   max-width: 1524px
 }
-.b-frame-10 a + div {
+.b-frame-10 > a {
+  height: 230px
+}
+.b-frame-10 > a + div {
   position: relative;
   margin-left: -11%
 }
-.b-frame-10 a + div img {
+.b-frame-10 > a + div img {
   max-width: 876px
 }
-.b-frame-10 a + div .frame-legend {
+.b-frame-10 > a + div .frame-legend {
   position: absolute;
   top: 25px;
   right: 70px
 }
-.b-frame-10 a img {
+.b-frame-10 > a img {
   height: 200px;
   -o-object-fit: cover;
   object-fit: cover
 }
-.b-frame-10 a .frame-legend {
+.b-frame-10 > a .frame-legend {
   margin-left: 58px
 }
 .b-frame-11 {
@@ -4467,7 +4471,10 @@ ol {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column
+  flex-direction: column;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0
 }
 .modal__col_body {
   display: -webkit-box;
@@ -4535,17 +4542,28 @@ ol {
   overflow-x: hidden;
   overflow-y: scroll;
   padding-right: 10px;
-  font-size: 1rem
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
 }
 .modal__text p {
   line-height: 1.3
 }
-.modal__text svg {
-  display: block;
-  -webkit-transform: scale(1.31);
-  -ms-transform: scale(1.31);
-  transform: scale(1.31);
-  margin: 36px 10px 37px auto
+.modal-svg-bottom {
+  margin: auto 10px 26px auto
+}
+.modal-svg-bottom svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.block-author .modal-svg-bottom {
+  margin: 0 0 0 auto
 }
 .svg-sprite {
   display: block;
@@ -5045,16 +5063,19 @@ ol {
   .b-frame-10 {
     margin-right: 10px
   }
-  .b-frame-10 a + div {
+  .b-frame-10 > a {
+    height: 300px
+  }
+  .b-frame-10 > a + div {
     margin-left: -20%
   }
-  .b-frame-10 a + div img {
+  .b-frame-10 > a + div img {
     max-width: 100%
   }
-  .b-frame-10 a img {
+  .b-frame-10 > a img {
     height: auto
   }
-  .b-frame-10 a .frame-legend {
+  .b-frame-10 > a .frame-legend {
     margin-left: 0
   }
   .b-frame-11 {
@@ -5328,6 +5349,9 @@ ol {
   .modal__text p {
     line-height: 1.4
   }
+  .modal-svg-bottom {
+    margin: auto -20px 30px auto
+  }
 }
 @media (min-width:1280px) {
   .content {
@@ -5450,6 +5474,14 @@ ol {
   }
   .mw-375 {
     width: 375px
+  }
+  .modalTop2 .modal-svg-bottom svg {
+    width: 74px;
+    height: 91px
+  }
+  .modalBot10_1 .modal-svg-bottom svg {
+    width: 60px;
+    height: 48px
   }
 }
 @media (max-width:767px) {
