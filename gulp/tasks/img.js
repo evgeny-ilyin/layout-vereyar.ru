@@ -38,7 +38,7 @@ export const img = () => {
 			.pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.img)))
 
 			// imagemin (переключено на tinypng выше)
-			// .pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.img, {encoding: false})))
+			// .pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.img, { encoding: false })))
 			// .pipe(app.plugins.if(app.isBuild, app.plugins.newer(app.path.build.img)))
 			// .pipe(
 			// 	app.plugins.if(
@@ -52,10 +52,6 @@ export const img = () => {
 			// 	)
 			// )
 			// .pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.img))
-
-			// svg просто перенести из src в build
-			.pipe(app.gulp.src(app.path.src.svg, { encoding: false }))
-			.pipe(app.gulp.dest(app.path.build.img))
 
 			.pipe(app.plugins.browsersync.stream())
 	);
