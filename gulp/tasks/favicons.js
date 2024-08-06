@@ -6,9 +6,9 @@ export const favicons = () => {
 };
 
 function copyLegacyFavicon() {
-	return app.gulp.src(app.path.src.faviconIco, { encoding: false }).pipe(app.gulp.dest(app.path.build.faviconIco));
+	return app.gulp.src(app.path.src.faviconLegacy, { encoding: false }).pipe(app.gulp.dest(app.path.build.faviconLegacy));
 }
 
 function copyModernFavicons() {
-	return app.gulp.src(app.path.src.faviconsOther, { encoding: false }).pipe(app.gulp.dest(app.path.build.faviconsOther));
+	return app.gulp.src(app.path.src.faviconsModern, { encoding: false }).pipe(app.gulp.dest(app.path.build.faviconsModern));
 }
