@@ -23,6 +23,7 @@ import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { img } from "./gulp/tasks/img.js";
 import { fonts } from "./gulp/tasks/fonts.js";
+import { favicons } from "./gulp/tasks/favicons.js";
 import { index } from "./gulp/tasks/index.js";
 import { svgsprite } from "./gulp/tasks/svgsprite.js";
 import { deploy } from "./gulp/tasks/deploy.js";
@@ -38,7 +39,7 @@ function watcher() {
 }
 
 // Основные задачи
-const mainTasks = gulp.parallel(/*vendors,*/ html, scss, js, img, fonts);
+const mainTasks = gulp.parallel(/*vendors,*/ html, scss, js, img, fonts, favicons);
 
 // Построение сценариев выполнения задач
 const dev = gulp.series(reset, svgsprite, mainTasks, index, gulp.parallel(watcher, server));
