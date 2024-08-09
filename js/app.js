@@ -360,6 +360,7 @@ const t=(t,e=1e4)=>(t=parseFloat(t+"")||0,Math.round((t+Number.EPSILON)*e)/e),e=
 ;// CONCATENATED MODULE: ./src/js/modules/fancyapps.js
 
 
+
 addEventListener("DOMContentLoaded", () => {
 	// Модальные окна
 	const ru = {
@@ -390,6 +391,11 @@ addEventListener("DOMContentLoaded", () => {
 		Toolbar: {
 			display: {
 				left: [],
+			},
+		},
+		on: {
+			"reveal": () => {
+				useDynamicAdapt();
 			},
 		},
 	};
@@ -9909,6 +9915,7 @@ if (!window.mapInit) {
 ;// CONCATENATED MODULE: ./src/js/app.js
 
 
+
 addEventListener("DOMContentLoaded", () => {
 	useDynamicAdapt();
 
@@ -9916,7 +9923,7 @@ addEventListener("DOMContentLoaded", () => {
 	clickAndDrag();
 	closeMenuHandler();
 	collapseHeaderElements();
-	
+
 	// fn.scrollHorisontallyByWheel();
 	// functions.isWebp();
 	// functions.stickyHeader();
