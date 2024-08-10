@@ -132,11 +132,11 @@
 
 	&.scroll-x {
 		overflow-x: auto;
-		
+
 		&::-webkit-scrollbar-track {
 			border-bottom: 2px solid $gray-light;
 		}
-	
+
 		&::-webkit-scrollbar-thumb {
 			border-bottom: 7px solid $red;
 		}
@@ -148,7 +148,7 @@
 		&::-webkit-scrollbar-track {
 			border-right: 2px solid $gray-light;
 		}
-	
+
 		&::-webkit-scrollbar-thumb {
 			border-right: 6px solid $red;
 		}
@@ -194,14 +194,6 @@
 	&::-webkit-scrollbar {
 		display: none;
 	}
-}
-
-.scroll-x {
-	overflow-x: scroll;
-}
-
-.scroll-y {
-	overflow-y: scroll;
 }
 
 /**
@@ -518,15 +510,4 @@
  */
 .h-100 {
 	height: 100% !important;
-}
-
-/**
- * Font sizes
- */
-.fz-13-20 {
-	font-size: rem(13) !important;
-
-	@include resp-from(lg) {
-		font-size: rem(20) !important;
-	}
 }

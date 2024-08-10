@@ -104,7 +104,7 @@
 
 	// .frame-card-1__header
 	&__header {
-		font-family: $family-primary;
+		font-family: $family-headers;
 		font-size: rem(13);
 		font-weight: 600;
 		line-height: 109%;
@@ -216,7 +216,7 @@
 
 .frame-header {
 	width: 100%;
-	font-family: $family-primary;
+	font-family: $family-headers;
 	font-weight: 600;
 	font-size: rem(26);
 	line-height: 0.9;
@@ -266,7 +266,7 @@
 		display: flex;
 		align-items: center;
 		gap: 16px;
-		font-family: $family-primary;
+		font-family: $family-headers;
 		font-weight: 500;
 		font-size: rem(19);
 		line-height: 0.8;
@@ -311,7 +311,7 @@
 }
 
 .block-header {
-	font-family: $family-primary;
+	font-family: $family-headers;
 	font-weight: 500;
 	font-size: rem(19);
 	line-height: 1;

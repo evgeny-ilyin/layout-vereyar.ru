@@ -19,7 +19,7 @@ vmax – наибольшее из (vw, vh)
 
 body {
 	color: $text-color;
-	font: normal rem(16) / 1.2 $family-secondary;
+	font: normal rem(16) / 1.2 $family-text;
 }
 
 /**
@@ -37,7 +37,7 @@ h5,
 .h5,
 h6,
 .h6 {
-	font-family: $family-primary;
+	font-family: $family-headers;
 }
 
 h1,
@@ -152,6 +152,14 @@ ol {
  */
 .small {
 	font-size: 0.85rem !important;
+}
+
+.fz-13-20 {
+	font-size: rem(13) !important;
+
+	@include resp-from(lg) {
+		font-size: rem(20) !important;
+	}
 }
 
 /**

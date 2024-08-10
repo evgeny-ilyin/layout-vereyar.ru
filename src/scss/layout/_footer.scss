@@ -60,7 +60,7 @@
 	// .footer__slogan
 	&__slogan {
 		text-transform: uppercase;
-		font-family: $family-primary;
+		font-family: $family-headers;
 		font-size: rem(14);
 		max-width: 270px;
 
@@ -160,7 +160,7 @@
 }
 
 .footer-header {
-	font-family: $family-primary;
+	font-family: $family-headers;
 	text-transform: uppercase;
 	font-size: rem(16);
 	font-weight: 600;

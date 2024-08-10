@@ -1,5 +1,5 @@
 .m-begin {
-	font-family: $family-primary;
+	font-family: $family-headers;
 	font-weight: 500;
 	font-size: rem(18);
 	line-height: 1.1;
@@ -25,7 +25,7 @@
 		margin-right: 15px;
 
 		&:last-child {
-			width: 1800px;
+			width: 1797px;
 			object-fit: cover;
 			object-position: 0 0;
 		}
@@ -77,7 +77,7 @@
 
 	// .m-end__text
 	&__text {
-		font-family: $family-primary;
+		font-family: $family-headers;
 		font-weight: 500;
 		font-size: rem(22);
 		line-height: 1;
