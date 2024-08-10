@@ -1,5 +1,6 @@
 import * as fn from "./modules/functions.js";
 import { useDynamicAdapt } from "./modules/dynamicAdapt.js";
+
 addEventListener("DOMContentLoaded", () => {
 	useDynamicAdapt();
 
@@ -7,7 +8,7 @@ addEventListener("DOMContentLoaded", () => {
 	fn.clickAndDrag();
 	fn.closeMenuHandler();
 	fn.collapseHeaderElements();
-	
+
 	// fn.scrollHorisontallyByWheel();
 	// functions.isWebp();
 	// functions.stickyHeader();

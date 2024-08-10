@@ -1,4 +1,5 @@
 import { Fancybox } from "@fancyapps/ui";
+import { useDynamicAdapt } from "./dynamicAdapt.js";
 
 addEventListener("DOMContentLoaded", () => {
 	// Модальные окна
@@ -30,6 +31,11 @@ addEventListener("DOMContentLoaded", () => {
 		Toolbar: {
 			display: {
 				left: [],
+			},
+		},
+		on: {
+			"reveal": () => {
+				useDynamicAdapt();
 			},
 		},
 	};
