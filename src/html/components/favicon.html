@@ -1,7 +1,12 @@
+<!-- ? https://dev.to/masakudamatsu/favicon-nightmare-how-to-maintain-sanity-3al7 -->
 <link rel="icon" href="favicon.ico" sizes="32x32">
-<link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
-<!-- png for safari -->
-<link rel="icon" href="favicon/favicon-light.png" media="(prefers-color-scheme: light)">
-<link rel="icon" href="favicon/favicon-dark.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon/favicon.svg" sizes="any" type="image/svg+xml">
 <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
 <link rel="manifest" href="favicon/manifest.webmanifest">
+<!--
+	В osX настройки цветовой схемы системы переопределяют настройки хрома, т.е. темная тема системы и светлая в хроме выдаст светлую иконку
+	Определение через js не сработает https://stackoverflow.com/questions/61873188/svg-using-css-prefers-color-scheme-not-working-with-style-on-it-on-safari 
+	В консоли отобразится системная настройка
+-->
+<!-- <link rel="icon" href="favicon/favicon-light.png" media="(prefers-color-scheme: light)"> -->
+<!-- <link rel="icon" href="favicon/favicon-dark.png" media="(prefers-color-scheme: dark)"> -->
