@@ -36,6 +36,8 @@ function watcher() {
 	gulp.watch(path.watch.scss, scss);
 	gulp.watch(path.watch.js, js);
 	gulp.watch(path.watch.img, img);
+	gulp.watch(path.watch.faviconLegacy, favicons);
+	gulp.watch(path.watch.faviconsModern, favicons);
 	gulp.watch(path.watch.svg, svgsprite);
 }
 
