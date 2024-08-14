@@ -143,7 +143,7 @@ export function collapseHeaderElements() {
 	let elements = ["header__slogan", "header__support"],
 		mediaTo = 768,
 		mq = window.matchMedia(`(max-width: ${mediaTo - 1}px)`);
-		
+
 	["load", "resize"].forEach((evt) =>
 		window.addEventListener(evt, () => {
 			elements.forEach((el) => {
@@ -160,3 +160,91 @@ export function collapseHeaderElements() {
 		})
 	);
 }
+
+export function fetchModalChunks() {
+	let url = "/ajax/modal-chunks.php";
+
+	(async () => {
+		try {
+			let response = await fetch(url);
+			if (!response.ok) return;
+			let result = await response.json();
+			if (result.status !== true) return;
+			updateModalChunks(result.chunks);
+		} catch (e) {
+			console.error(e);
+			return;
+		}
+	})();
+}
+
+let updateModalChunks = (obj, where = document) => {
+	if (typeof obj === "object" && obj !== null) {
+		// text
+		if (obj.text) {
+			Object.entries(obj.text).forEach(([key]) => {
+				let target = where.querySelector(`[data-fancybox=${key}]`);
+				if (!target) return;
+				target.href = `/ajax/modal.php?m=${key}`;
+				target.dataset.type = "ajax";
+			});
+		}
+
+		// quote
+		if (obj.quote) {
+			Object.entries(obj.quote).forEach(([key]) => {
+				let target = where.querySelector(`[data-fancybox=${key}]`);
+				if (!target) return;
+				target.href = `/ajax/modal.php?m=${key}`;
+				target.dataset.type = "ajax";
+			});
+		}
+
+		// gallery
+		if (obj.gallery) {
+			Object.entries(obj.gallery).forEach(([key, obj2]) => {
+				let target = where.querySelector(`[data-fancybox=${key}]`);
+				if (!target) return;
+				target.setAttribute("aria-label", obj2.name);
+
+				let mainImage = obj2.images.shift();
+				if (!mainImage) return;
+				target.href = mainImage;
+
+				if (obj2.images.length > 0) {
+					let galleryImages = obj2.images,
+						galleryDiv = document.createElement("div");
+
+					galleryDiv.style.display = "none";
+
+					galleryImages.forEach((path) => {
+						galleryDiv.innerHTML += `<a href="${path}" data-fancybox="${key}"></a>`;
+					});
+					document.body.append(galleryDiv);
+				}
+			});
+		}
+
+		// video
+		if (obj.video) {
+			Object.entries(obj.video).forEach(([key, obj2]) => {
+				let target = where.querySelector(`[data-fancybox=${key}]`);
+				if (!target || !obj2.link) return;
+				target.href = obj2.link;
+				target.setAttribute("aria-label", obj2.name);
+			});
+		}
+
+		// file
+		if (obj.file) {
+			Object.entries(obj.file).forEach(([key, link]) => {
+				let target = where.querySelector(`[data-fancybox=${key}]`);
+				if (!target || !link) return;
+				target.href = link;
+				target.removeAttribute("data-fancybox");
+			});
+		}
+	} else {
+		console.error("Chunk list is not an object");
+	}
+};

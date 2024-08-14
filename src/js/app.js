@@ -8,6 +8,7 @@ addEventListener("DOMContentLoaded", () => {
 	fn.clickAndDrag();
 	fn.closeMenuHandler();
 	fn.collapseHeaderElements();
+	fn.fetchModalChunks();
 
 	// fn.scrollHorisontallyByWheel();
 	// functions.isWebp();
