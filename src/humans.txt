@@ -1,6 +1,6 @@
 /* TEAM */
 	Frontend and backend: Evgeny V. Ilyin
-	Contact: deviart.lab [at] gmail.com
+	Contact: Evgeny.V.Ilyin [at] gmail.com
 	Web: https://deviart.ru
 	From: Himki, Moscow, Russia
 
