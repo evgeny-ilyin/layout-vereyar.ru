@@ -9,18 +9,23 @@
 	<link rel="author" href="https://vereyar.ru/humans.txt" type="text/plain">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap&v=20240810100508">
-	<link rel="stylesheet" href="css/root-vars.css?v=20240810100508">
-	<link rel="stylesheet" href="css/style.css?v=20240810100508">
+	<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap&v=20240814203537">
+	<link rel="stylesheet" href="css/root-vars.css?v=20240814203537">
+	<link rel="stylesheet" href="css/style.css?v=20240814203537">
 	<title>Вереяр — всесезонный горнолыжный и бальнеологический курорт</title>
 	<meta name="description" content="Вереяр — всесезонный горнолыжный и бальнеологический курорт в Карелии">
+	<!-- ? https://dev.to/masakudamatsu/favicon-nightmare-how-to-maintain-sanity-3al7 -->
 	<link rel="icon" href="favicon.ico" sizes="32x32">
-	<link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
-	<!-- png for safari -->
-	<link rel="icon" href="favicon/favicon-light.png" media="(prefers-color-scheme: light)">
-	<link rel="icon" href="favicon/favicon-dark.png" media="(prefers-color-scheme: dark)">
+	<link rel="icon" href="favicon/favicon.svg" sizes="any" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
 	<link rel="manifest" href="favicon/manifest.webmanifest">
+	<!--
+	В osX настройки цветовой схемы системы переопределяют настройки хрома, т.е. темная тема системы и светлая в хроме выдаст светлую иконку
+	Определение через js не сработает https://stackoverflow.com/questions/61873188/svg-using-css-prefers-color-scheme-not-working-with-style-on-it-on-safari 
+	В консоли отобразится системная настройка
+-->
+	<!-- <link rel="icon" href="favicon/favicon-light.png" media="(prefers-color-scheme: light)"> -->
+	<!-- <link rel="icon" href="favicon/favicon-dark.png" media="(prefers-color-scheme: dark)"> -->
 </head>
 
 <body>
@@ -95,13 +100,15 @@
 
 			<div class="main__top">
 				<div class="t-frame-1 d-flex flex-column justify-content-between">
-					<a href="javascript:void(0)" class="d-flex align-items-center gap-2 link-pdf">
+					<!-- PROD: <a href="/" class="d-flex align-items-center gap-2 link-pdf" data-fancybox="modalTop0"> -->
+					<a href="/" class="d-flex align-items-center gap-2 link-pdf">
 						<svg width="50" height="37">
 							<use xlink:href="#icon-pdf"></use>
 						</svg>
 						скачать <br>презентацию
 					</a>
-					<a href="javascript:void(0)" class="d-flex align-items-end no-decoration" data-fancybox data-src="#modalTop1">
+					<!-- PROD: <a href="/" class="d-flex align-items-end no-decoration" data-fancybox="modalTop1"> -->
+					<a href="/" class="d-flex align-items-end no-decoration" data-fancybox data-src="#modalTop1">
 						<picture>
 							<source srcset="img/main-top/top-img-1.webp" type="image/webp"><img src="img/main-top/top-img-1.jpg" class="circle mw-110" width="150" height="150" alt="">
 						</picture>
@@ -110,7 +117,8 @@
 				</div>
 
 				<div class="t-frame-2 d-flex align-items-end">
-					<a href="https://www.youtube.com/watch?v=7NOSDKb0HlU" data-fancybox class="d-flex align-items-center justify-content-center modal-video" aria-label="Вереяр видео">
+					<!-- PROD: <a href="/" class="d-flex align-items-center justify-content-center modal-video" data-fancybox="modalTop2"> -->
+					<a href="https://www.youtube.com/watch?v=7NOSDKb0HlU" class="d-flex align-items-center justify-content-center modal-video" data-fancybox aria-label="Вереяр видео">
 						<svg viewBox="0 0 90 90" class="modal-video-btn">
 							<circle cx="45" cy="45" r="45" fill-opacity=".6" />
 							<path d="M71 45 32 67.517V22.483L71 45Z" />
@@ -122,7 +130,8 @@
 				</div>
 
 				<div class="t-frame-3 d-flex align-items-end">
-					<a href="javascript:void(0)" class="d-flex flex-column no-decoration">
+					<!-- PROD: <a href="/" class="d-flex flex-column no-decoration" data-fancybox="modalTop3"> -->
+					<a href="/" class="d-flex flex-column no-decoration" data-fancybox data-src="#modalTop3">
 						<picture>
 							<source srcset="img/main-top/top-img-3.webp" type="image/webp"><img src="img/main-top/top-img-3.jpg" class="circle mw-110 mb-1" width="150" height="150" alt="">
 						</picture>
@@ -131,7 +140,8 @@
 				</div>
 
 				<div class="t-frame-4 d-flex align-items-end">
-					<a href="javascript:void(0)" class="d-flex flex-column no-decoration">
+					<!-- PROD: <a href="/" class="d-flex flex-column no-decoration" data-fancybox="modalTop4"> -->
+					<a href="/" class="d-flex flex-column no-decoration" data-fancybox data-src="#modalTop4">
 						<picture>
 							<source srcset="img/main-top/top-img-4.webp" type="image/webp"><img src="img/main-top/top-img-4.jpg" class="mw-117 mb-2" width="160" height="160" alt="">
 						</picture>
@@ -152,7 +162,8 @@
 				</div>
 
 				<div class="t-frame-6 d-flex align-items-end">
-					<a href="javascript:void(0)" class="d-flex flex-column no-decoration">
+					<!-- PROD: <a href="/" class="d-flex flex-column no-decoration" data-fancybox="modalTop6"> -->
+					<a href="/" class="d-flex flex-column no-decoration" data-fancybox data-src="#modalTop6">
 						<picture>
 							<source srcset="img/main-top/top-img-6.webp" type="image/webp"><img src="img/main-top/top-img-6.jpg" class="circle mw-110 mb-3" width="150" height="150" alt="" loading="lazy">
 						</picture>
@@ -171,14 +182,16 @@
 							<div class="frame-card-1__header">Легенда Вереяра</div>
 							<div class="frame-card-1__body">В древние времена на просторах Карелии жили великаны, известные своей мощью и радушием. Эта легенда говорит о том, как великан Вереяр построил ворота на холме и почему это место стало символом гостеприимства и отдыха.</div>
 							<div class="frame-card-1__link">
-								<a href="/" class="link-more" rel="nofollow" data-fancybox data-src="#modalTop7">подробнее</a>
+								<!-- PROD: <a href="/" class="link-more" data-fancybox="modalTop7">подробнее</a> -->
+								<a href="/" class="link-more" data-fancybox data-src="#modalTop7">подробнее</a>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="t-frame-8 d-flex align-items-end">
-					<a href="javascript:void(0)" class="d-flex flex-column no-decoration">
+					<!-- PROD: <a href="/" class="d-flex flex-column no-decoration" data-fancybox="modalTop8"> -->
+					<a href="/" class="d-flex flex-column no-decoration" data-fancybox data-src="#modalTop8">
 						<picture>
 							<source srcset="img/main-top/top-img-8.webp" type="image/webp"><img src="img/main-top/top-img-8.jpg" class="mb-3" width="295" height="250" alt="" loading="lazy">
 						</picture>
@@ -203,7 +216,8 @@
 				</div>
 
 				<div class="t-frame-11 d-flex align-items-end">
-					<a href="javascript:void(0)" class="d-flex flex-column no-decoration" data-fancybox="" data-src="#modalTop11">
+					<!-- PROD: <a href="/" class="d-flex flex-column no-decoration" data-fancybox="modalTop11"> -->
+					<a href="/" class="d-flex flex-column no-decoration" data-fancybox data-src="#modalTop11">
 						<picture>
 							<source srcset="img/main-top/top-img-11.webp" type="image/webp"><img src="img/main-top/top-img-11.jpg" class="circle mw-110 mb-3" width="150" height="150" alt="" loading="lazy">
 						</picture>
@@ -217,9 +231,10 @@
 							<div class="frame-card-2__body">Курорт &laquo;Вереяр&raquo; предлагает гостям широкое разнообразие вариантов размещения: гостиницы, коттеджи, зона глэмпинга. Возможность приехать в Карелию на отдых или остаться навсегда в своём собственном коттедже в комфортабельном посёлке на&nbsp;территории курорта.</div>
 						</div>
 						<div class="frame-card-2__img">
-							<a href="img/modals/gallery-1-4.jpg" class="no-decoration frame-image-link" data-fancybox="gallery-1">
+							<!-- PROD: <a href="/" class="no-decoration frame-image-link" data-fancybox="modalTop12"> -->
+							<a href="img/modals/gallery-1-4.jpg" class="no-decoration frame-image-link" data-fancybox="gallery-1" aria-label="Галерея вариантов размещения">
 								<picture>
-									<source srcset="img/main-top/top-img-12.webp" type="image/webp"><img src="img/main-top/top-img-12.jpg" width="295" height="200" alt="" loading="lazy" aria-label="Вереяр фотогалерея">
+									<source srcset="img/main-top/top-img-12.webp" type="image/webp"><img src="img/main-top/top-img-12.jpg" width="295" height="200" alt="" loading="lazy">
 								</picture>
 							</a>
 						</div>
@@ -227,11 +242,12 @@
 				</div>
 
 				<div class="t-frame-13 d-flex align-items-end">
-					<a href="img/modals/gallery-1-1.jpg" class="no-decoration" data-fancybox="gallery-1">
+					<!-- PROD: <a href="/" class="no-decoration" data-fancybox="modalTop13"> -->
+					<a href="img/modals/gallery-1-1.jpg" class="no-decoration" data-fancybox="gallery-1" aria-label="Галерея причалы курорта">
 						<div class="d-flex align-items-end gap-3">
 							<div class="frame-legend">причалы курорта</div>
 							<picture>
-								<source srcset="img/main-top/top-img-13.webp" type="image/webp"><img src="img/main-top/top-img-13.jpg" class="mw-375" width="635" height="270" alt="" loading="lazy" aria-label="Вереяр фотогалерея">
+								<source srcset="img/main-top/top-img-13.webp" type="image/webp"><img src="img/main-top/top-img-13.jpg" class="mw-375" width="635" height="270" alt="" loading="lazy">
 							</picture>
 						</div>
 					</a>
@@ -260,11 +276,12 @@
 				<div class="t-frame-16 d-flex flex-column justify-content-end">
 					<div class="d-flex align-items-end gap-3">
 						<div class="frame-legend">традиционные <br>избы Севера <br>и концепт <br>архитектуры <br>курорта</div>
-						<a href="img/modals/gallery-1-3.jpg" class="no-decoration" data-fancybox="gallery-1" data-thumb="img/modals/gallery-1-3.jpg">
+						<!-- PROD: <a href="/" class="no-decoration" data-fancybox="modalTop16"> -->
+						<a href="img/modals/gallery-1-3.jpg" class="no-decoration" data-fancybox="gallery-1" data-thumb="img/modals/gallery-1-3.jpg" aria-label="Галерея избы Севера">
 							<picture>
 								<source media="(min-width: 1024px)" srcset="img/main-top/top-img-16-1024.webp" type="image/webp">
 								<source srcset="img/main-top/top-img-16-320.webp" type="image/webp">
-								<img src="img/main-top/top-img-16-1024.jpg" width="635" height="270" alt="" loading="lazy" aria-label="Вереяр фотогалерея">
+								<img src="img/main-top/top-img-16-1024.jpg" width="635" height="270" alt="" loading="lazy">
 							</picture>
 						</a>
 					</div>
@@ -328,7 +345,6 @@
 				</div>
 
 				<div class="t-frame-23 d-flex flex-column justify-content-between">
-
 					<picture>
 						<source media="(min-width: 1024px)" srcset="img/main-top/top-img-23-1024.webp" type="image/webp">
 						<source srcset="img/main-top/top-img-23-320.webp" type="image/webp">
@@ -487,7 +503,8 @@
 
 			<div class="main__bottom">
 				<div class="b-frame-1 d-flex align-items-start">
-					<a href="javascript:void(0)" class="d-flex gap-5 no-decoration frame-block-link">
+					<!-- PROD: <a href="/" class="d-flex gap-5 no-decoration frame-block-link" data-fancybox="modalBot1"> -->
+					<a href="/" class="d-flex gap-5 no-decoration frame-block-link" data-fancybox data-src="#modalBot1">
 						<div class="d-flex flex-column justify-content-between">
 							<div class="frame-header">
 								Идея
@@ -514,6 +531,7 @@
 				</div>
 
 				<div class="b-frame-2 d-flex align-items-end">
+					<!-- PROD: <a href="/" class="d-flex align-items-center no-decoration" data-fancybox="modalBot2"> -->
 					<a href="img/modals/modal-bot-2.png" class="d-flex align-items-center no-decoration" data-fancybox>
 						<div class="frame-legend">озеро <br>&laquo;Мунозеро&raquo; <br>Кондопожский <br>район Карелии</div>
 						<picture>
@@ -533,7 +551,8 @@
 							<div class="frame-card-1__header">История места</div>
 							<div class="frame-card-1__body">Люди устраивались на древних берегах озёр, обычно южных, на длинных мысах-полуостровах. Археологические памятники каменного века представлены поселениями (стоянки, стойбища и т. д.).</div>
 							<div class="frame-card-1__link">
-								<a href="/" class="link-more" rel="nofollow" data-fancybox data-src="#modalBot3">подробнее</a>
+								<!-- PROD: <a href="/" class="link-more" data-fancybox="modalBot3">подробнее</a> -->
+								<a href="/" class="link-more" data-fancybox data-src="#modalBot3">подробнее</a>
 							</div>
 						</div>
 					</div>
@@ -570,7 +589,8 @@
 				</div>
 
 				<div class="b-frame-7 d-flex align-items-start">
-					<a href="javascript:void(0)" class="d-flex gap-5 no-decoration frame-block-link">
+					<!-- PROD: <a href="/" class="d-flex gap-5 no-decoration frame-block-link" data-fancybox="modalBot7"> -->
+					<a href="/" class="d-flex gap-5 no-decoration frame-block-link" data-fancybox data-src="#modalBot7">
 						<div class="d-flex flex-column justify-content-between">
 							<div class="frame-header visible-lg">
 								Концепция
@@ -617,7 +637,8 @@
 				</div>
 
 				<div class="b-frame-9 d-flex flex-column">
-					<a href="javascript:void(0)" class="no-decoration frame-block-link">
+					<!-- PROD: <a href="/" class="no-decoration frame-block-link" data-fancybox="modalBot9"> -->
+					<a href="/" class="no-decoration frame-block-link" data-fancybox data-src="#modalBot9">
 						<div class="frame-header mb-3">
 							Мастер-план
 						</div>
@@ -628,7 +649,8 @@
 				</div>
 
 				<div class="b-frame-10 d-flex">
-					<a href="javascript:void(0)" class="flex-shrink-0 no-decoration z-1" data-fancybox data-src="#modalBot10_1" aria-label="Планируемый вид курорта">
+					<!-- PROD: <a href="/" class="flex-shrink-0 no-decoration z-1" data-fancybox="modalBot10"> -->
+					<a href="/" class="flex-shrink-0 no-decoration z-1" data-fancybox data-src="#modalBot10" aria-label="Планируемый вид курорта">
 						<div class="d-flex flex-column gap-3">
 							<picture>
 								<source srcset="img/main-bottom/bot-img-10-1.webp" type="image/webp"><img src="img/main-bottom/bot-img-10-1.jpg" class="mw-375" width="634" height="270" alt="" loading="lazy">
@@ -637,7 +659,8 @@
 						</div>
 					</a>
 					<div>
-						<a href="img/modals/modal-bot-10-2.png" class="no-decoration" data-fancybox aria-label="План курорта">
+						<!-- PROD: <a href="/" class="no-decoration" data-fancybox="modalBot10-2"> -->
+						<a href="img/modals/modal-bot-10-2.png" class="no-decoration" data-fancybox="modalBot10-2" aria-label="План курорта">
 							<div class="frame-legend hidden-lg">план курорта</div>
 							<picture>
 								<source srcset="img/main-bottom/bot-img-10-2.webp" type="image/webp"><img src="img/main-bottom/bot-img-10-2.png" width="1193" height="459" alt="" loading="lazy">
@@ -647,7 +670,8 @@
 				</div>
 
 				<div class="b-frame-11 d-flex flex-column justify-content-between">
-					<a href="javascript:void(0)" class="no-decoration frame-block-link">
+					<!-- PROD: <a href="/" class="no-decoration frame-block-link" data-fancybox="modalBot11"> -->
+					<a href="/" class="no-decoration frame-block-link" data-fancybox data-src="#modalBot11">
 						<div class="frame-header mb-4">
 							Архитектура
 						</div>
@@ -663,9 +687,10 @@
 				</div>
 
 				<div class="b-frame-12 d-flex align-items-start">
-					<a href="img/modals/gallery-1-2.jpg" class="no-decoration frame-image-link" data-fancybox="gallery-1">
+					<!-- PROD: <a href="/" class="no-decoration frame-image-link" data-fancybox="modalBot12"> -->
+					<a href="img/modals/gallery-1-2.jpg" class="no-decoration frame-image-link" data-fancybox="gallery-1" aria-label="Галерея архитектура">
 						<picture>
-							<source srcset="img/main-bottom/bot-img-12.webp" type="image/webp"><img src="img/main-bottom/bot-img-12.jpg" class="mw-375" width="512" height="250" alt="" loading="lazy" aria-label="Вереяр фотогалерея">
+							<source srcset="img/main-bottom/bot-img-12.webp" type="image/webp"><img src="img/main-bottom/bot-img-12.jpg" class="mw-375" width="512" height="250" alt="" loading="lazy">
 						</picture>
 					</a>
 				</div>
@@ -679,7 +704,6 @@
 						<div class="architecture__col">
 							<div class="block-header mb-1">15 тыс. м<sup>2</sup></div>
 							<div class="block-legend mb-6">гостиницы 4*</div>
-
 							<div class="block-header mb-1">21 тыс. м<sup>2</sup></div>
 							<div class="block-legend mb-6">гостиницы 3*</div>
 						</div>
@@ -690,7 +714,8 @@
 				</div>
 
 				<div class="b-frame-14 d-flex flex-column justify-content-between">
-					<a href="javascript:void(0)" class="no-decoration frame-block-link">
+					<!-- PROD: <a href="/" class="no-decoration frame-block-link" data-fancybox="modalBot14"> -->
+					<a href="/" class="no-decoration frame-block-link" data-fancybox data-src="#modalBot14">
 						<div class="frame-header mb-4">
 							Бальнеология
 						</div>
@@ -712,7 +737,8 @@
 							<div class="frame-card-1__header">Чудесное оздоровление</div>
 							<div class="frame-card-1__body">&laquo;Вереяр&raquo; находится в долине железистых минеральных вод &mdash; их чудодейственный эффект был обнаружен ещё при Петре I, который основал здесь первый в России бальнеологический северный курорт.</div>
 							<div class="frame-card-1__link">
-								<a href="javascript:void(0)" class="link-more" rel="nofollow">подробнее</a>
+								<!-- PROD: <a href="/" class="link-more" data-fancybox="modalBot15">подробнее</a> -->
+								<a href="/" class="link-more" data-fancybox data-src="#modalBot15">подробнее</a>
 							</div>
 						</div>
 					</div>
@@ -741,7 +767,8 @@
 				</div>
 
 				<div class="b-frame-18 z-1 d-flex flex-column justify-content-between">
-					<a href="javascript:void(0)" class="no-decoration frame-block-link">
+					<!-- PROD: <a href="/" class="no-decoration frame-block-link" data-fancybox="modalBot18"> -->
+					<a href="/" class="no-decoration frame-block-link" data-fancybox data-src="#modalBot18">
 						<div class="frame-header mb-4">
 							Горнолыжная инфраструктура
 						</div>
@@ -752,6 +779,7 @@
 				</div>
 
 				<div class="b-frame-19 d-flex align-items-center">
+					<!-- PROD: <a href="/" class="no-decoration" data-fancybox="modalBot19"> -->
 					<a href="img/modals/modal-bot-19.png" class="no-decoration" data-fancybox aria-label="Карта спусков">
 						<picture>
 							<source srcset="img/main-bottom/bot-img-19.webp" type="image/webp"><img src="img/main-bottom/bot-img-19.png" width="1317" height="352" alt="" loading="lazy">
@@ -760,7 +788,8 @@
 				</div>
 
 				<div class="b-frame-20 d-flex flex-column justify-content-between">
-					<a href="javascript:void(0)" class="no-decoration frame-block-link">
+					<!-- PROD: <a href="/" class="no-decoration frame-block-link" data-fancybox="modalBot20"> -->
+					<a href="/" class="no-decoration frame-block-link" data-fancybox data-src="#modalBot20">
 						<div class="frame-header ml-5">
 							Всесезонные <br>активности
 						</div>
@@ -833,7 +862,8 @@
 				</div>
 
 				<div class="b-frame-26 d-flex align-items-start">
-					<a href="javascript:void(0)" class="d-flex no-decoration frame-block-link">
+					<!-- PROD: <a href="/" class="d-flex no-decoration frame-block-link" data-fancybox="modalBot26"> -->
+					<a href="/" class="d-flex no-decoration frame-block-link" data-fancybox data-src="#modalBot26">
 						<div class="d-flex flex-column justify-content-between">
 							<div class="frame-header">
 								Устойчивое <br>развитие
@@ -868,12 +898,10 @@
 				</div>
 
 				<div class="b-frame-28 d-flex flex-column align-items-center">
-
 					<picture data-da=".b-frame-26 .dynamic-adapt-1,1023">
 						<source srcset="img/main-bottom/bot-img-28.webp" type="image/webp">
 						<img src="img/main-bottom/bot-img-28.jpg" class="mw-185" width="244" height="244" alt="" loading="lazy">
 					</picture>
-
 					<svg width="193" height="55" data-da=".b-frame-26 .dynamic-adapt-2,1023">
 						<use xlink:href="#main-icon-eco-3"></use>
 					</svg>
@@ -919,10 +947,7 @@
 						</picture>
 					</div>
 				</div>
-
-
 			</div>
-
 		</div>
 		<div class="content">
 			<div class="partners" id="partners">
@@ -1316,12 +1341,6 @@
 				</clipPath>
 			</defs>
 		</symbol>
-		<symbol fill="none" viewBox="0 0 58 72" id="ornament-bird-red" xmlns="http://www.w3.org/2000/svg">
-			<path fill="#FD504C" d="M9.064 21.06v5.817L.787 34.664l3.592 4.246h27.773l7.22-10.387 9.033 8.907 3.888-3.833a3.65 3.65 0 0 0 1.774.474c2.013 0 3.645-1.61 3.645-3.594 0-1.985-1.632-3.595-3.645-3.595-2.012 0-3.644 1.61-3.644 3.595 0 .427.09.833.227 1.218l-2.245 2.214-3.956-3.901 4.896-4.829c.465.209.972.334 1.516.334 2.013 0 3.645-1.61 3.645-3.595 0-1.984-1.632-3.594-3.645-3.594-2.012 0-3.644 1.61-3.644 3.595 0 .536.126 1.041.337 1.494l-4.896 4.829-3.127-3.084 9.962-9.823c.465.208.972.333 1.516.333 2.013 0 3.645-1.61 3.645-3.594 0-1.985-1.633-3.594-3.645-3.594-2.013 0-3.645 1.61-3.645 3.594 0 .536.127 1.042.338 1.495l-9.962 9.824-3.401-3.355 4.204-4.146c.534.302 1.147.49 1.807.49 2.012 0 3.644-1.61 3.644-3.595 0-1.984-1.632-3.594-3.644-3.594-2.013 0-3.645 1.61-3.645 3.594 0 .417.085.808.217 1.183l-4.369 4.307-2.979-2.937 2.641-2.605c.18.026.36.052.544.052 2.013 0 3.645-1.61 3.645-3.594 0-1.984-1.632-3.594-3.645-3.594-2.012 0-3.644 1.61-3.644 3.594 0 .86.317 1.636.83 2.256l-3.947 3.89 11.7 11.538H17.526V16.45l-3.016-3.526 7.675-7.464L17.542.745l-4.178 4.12 2.694 2.776-3.936 3.672-3.993-3.49 2.742-2.661-4.179-4.12L2.15 5.667l7.6 6.797L0 21.06h9.064ZM7.463 42.759v21.95H1.352v7.037h11.715V42.76H7.463Zm19.08 0v21.95h-7.02v7.037h12.63V42.76h-5.61Z" />
-		</symbol>
-		<symbol fill="none" viewBox="0 0 101 81" id="ornament-fish-swamp" xmlns="http://www.w3.org/2000/svg">
-			<path fill="#7E775E" d="M100.549 40.37C101.948 4.239 57.279.63 57.279.63v28.8C48.749 7.03 28.481 5.963 28.481 5.963L32.476 29.7C20.638 10.977 0 12.375 0 12.375V40.37h100.549ZM.008 45.701v24.023s17.972-6.25 28.48-14.179V80.86S50.442 63.775 56.817 45.7H.008Zm57.279 0v34.926s31.34 3.917 40.581-25.677c1.02-3.276 1.731-6.351 2.164-9.249H57.279h.008Z" />
-		</symbol>
 		<symbol fill="none" viewBox="0 0 194 78" id="top-img-9" xmlns="http://www.w3.org/2000/svg">
 			<path fill="#98C8CD" d="M150.086-8.008h-3.752v39.402H46.906V-8.008h-3.752v43.13h106.932v-43.13Z" />
 			<path fill="#98C8CD" d="M178.86-8.008h-3.752V59.97H18.132V-8.008h-3.753v71.706H178.86V-8.008Z" />
@@ -1332,8 +1351,8 @@
 		</symbol>
 	</svg>
 	<!-- Укажите свой API-ключ. Тестовый ключ НЕ БУДЕТ работать на других сайтах. -->
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=4099eef8-9005-4e17-bad7-b20a671b0ca3&v=20240810100508"></script>
-	<script src="js/app.js?v=20240810100508"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=4099eef8-9005-4e17-bad7-b20a671b0ca3&v=20240814203537"></script>
+	<script src="js/app.js?v=20240814203537"></script>
 	<script>
 		let data = {
 			"pointerIcon": "img/icon-map-pointer.svg",
@@ -1379,11 +1398,11 @@
 		</div>
 	</div>
 
-	<div id="modalTop7" class="modal modalTop7">
+	<div id="modalTop7" class="modal">
 		<div class="modal__wrapper">
 
 			<div class="modal__col modal__col_aside" data-da="#modalTop7 .modal__text,1023,0">
-				<div class="modal__img">
+				<div class="modal__img modal__img_h50">
 					<picture>
 						<source srcset="img/modals/modal-top-7.webp" type="image/webp"><img src="img/modals/modal-top-7.jpg" width="600" height="320" alt="" loading="lazy">
 					</picture>
@@ -1402,10 +1421,8 @@
 							<div class="block-author__name">Дмитрий Хан</div>
 							<div class="block-author__title">Генеральный директор<br>ООО &laquo;ГРБК &laquo;Спасская Губа&raquo;</div>
 						</div>
-						<div class="modal-svg-bottom" data-da="#modalTop7 .modal__text,1023,last">
-							<svg width="58" height="71">
-								<use xlink:href="#ornament-bird-red"></use>
-							</svg>
+						<div class="modal-svg-icon-quote" data-da="#modalTop7 .modal__text,1023,last">
+							<img src="img/dev/ornament-bird-red.svg" width="90" height="90" alt="">
 						</div>
 					</div>
 				</div>
@@ -1417,7 +1434,7 @@
 				</div>
 				<div class="modal__text scrollblock scroll-y">
 					<p>В древние времена на просторах Карелии обитали великаны. Славились они не только своей мощью, но и невероятным гостеприимством. Однажды между ними разгорелось состязание: кто же из них окажется самым гостеприимным хозяином.</p>
-					<p>Первый великан, стремясь показать своё щедрое сердце, накрыл стол, который мог бы вместить всех жителей мира. Но в своём рвении он забыл о самом главном &mdash;пригласить гостей. Второй, воспылав желанием победить, позвал к себе всех подряд, но так увлёкся приглашениями, что забыл о пространстве для гостей &mdash; и они не смогли уместиться в его доме.</p>
+					<p>Первый великан, стремясь показать своё щедрое сердце, накрыл стол, который мог бы вместить всех жителей мира. Но в своём рвении он забыл о самом главном &mdash; пригласить гостей. Второй, воспылав желанием победить, позвал к себе всех подряд, но так увлёкся приглашениями, что забыл о пространстве для гостей &mdash; и они не смогли уместиться в его доме.</p>
 					<p><strong>Тогда на арену вышел третий великан по имени Вереяр.</strong> Он не торопился с действиями и не хвастал планами. Вереяр взял два огромных столба и поднялся на высокий холм, где силой своих рук воздвиг ворота, словно вход в невиданный двор. Остальные великаны смеялись над ним, не понимая смысла его действий. Но Вереяр лишь улыбнулся в ответ и произнёс: &laquo;Где ворота &mdash; там двор. Где двор &mdash; там дом. А где дом &mdash; там всегда найдутся гости&raquo;.</p>
 					<p>И словно магическим образом, всё обернулось так, как он сказал. Через эти ворота-портал в его дом стали стекаться гости со всех уголков мира. И каждому находилось место, каждый знал, что его ждёт тёплый приём и вкусное угощение. С тех пор прошло много лет, но место это до сих пор зовут Вереяр. И до сих пор люди со всех концов приходят сюда за чудом, за уютом и теплом. Они знают &mdash; здесь всегда рады гостям. Так образовалось место силы, которое напоминает всем о важности гостеприимства, доброты и того необыкновенного чувства, когда тебя ждут и рады видеть.</p>
 				</div>
@@ -1431,7 +1448,7 @@
 			<div class="modal__col modal__col_aside" data-da="#modalTop11 .modal__text,1023,0">
 				<div class="modal__img">
 					<picture>
-						<source srcset="img/modals/modal-bot-11.webp" type="image/webp"><img src="img/modals/modal-bot-11.jpg" width="600" height="640" alt="" loading="lazy">
+						<source srcset="img/modals/modal-top-11.webp" type="image/webp"><img src="img/modals/modal-top-11.jpg" width="600" height="640" alt="" loading="lazy">
 					</picture>
 				</div>
 			</div>
@@ -1471,10 +1488,10 @@
 		</div>
 	</div>
 
-	<div id="modalBot10_1" class="modal modalBot10_1">
+	<div id="modalBot10" class="modal">
 		<div class="modal__wrapper">
 
-			<div class="modal__col modal__col_aside" data-da="#modalBot10_1 .modal__text,1023,0">
+			<div class="modal__col modal__col_aside" data-da="#modalBot10 .modal__text,1023,0">
 				<div class="modal__img">
 					<picture>
 						<source srcset="img/modals/modal-bot-10-1.webp" type="image/webp"><img src="img/modals/modal-bot-10-1.jpg" width="600" height="640" alt="" loading="lazy">
@@ -1489,10 +1506,8 @@
 				<div class="modal__text scrollblock scroll-y">
 					<p>Концепция курорта подразумевает создание уютного городка с разнообразием отелей, апартов, ресторанов, кафе, магазинов и сервисов.</p>
 					<p>Базарные площади, торговые галереи и креативные общественные пространства, пристань и яхтенная марина сформируют незабываемую атмосферу северного гостеприимства.</p>
-					<div class="modal-svg-bottom">
-						<svg width="101" height="81">
-							<use xlink:href="#ornament-fish-swamp"></use>
-						</svg>
+					<div class="modal-svg-icon-text">
+						<img src="img/dev/ornament-fish-swamp.svg" width="60" height="60" alt="">
 					</div>
 				</div>
 			</div>
