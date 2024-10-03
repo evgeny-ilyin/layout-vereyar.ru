@@ -6,7 +6,7 @@
 		{ "src": "/favicon/icon-192.png", "type": "image/png", "sizes": "192x192" },
 		{ "src": "/favicon/icon-512.png", "type": "image/png", "sizes": "512x512" }
 	],
-	"start_url": "/index.html",
+	"start_url": "/index.php",
 	"theme_color": "#292929",
 	"background_color": "#ffffff",
 	"display": "standalone"
